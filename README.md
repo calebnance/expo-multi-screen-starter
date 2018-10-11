@@ -16,6 +16,8 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 
 - Preloading/caching local assets (with splash loading screen)
 - React Navigation v2
+- Use of [react-native-screens](https://github.com/kmagiera/react-native-screens) (faster navigation)
+- Expo SDK 30 (will always try to keep this on the latest SDK version)
 - Checker for the notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
 - Simple Jest testing
 - SVG usage
@@ -73,6 +75,7 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 
 ## assets
 - [black rabbit icon](https://thenounproject.com/search/?q=rabbit&i=1211060) was bought (royalty-free license)
+- SVG Icons from [icomoon](https://icomoon.io)
 
 ## device learnings
 - **ios:**
