@@ -10,7 +10,7 @@
 - [device learnings](#device-learnings)
 - [release notes](#release-notes)
 
-Expo *|* React Navigation v2 *|* Jest *|* Prettier
+Expo | React Navigation v2 | Jest | ESLint/Prettier
 
 **Out of the Box**
 
