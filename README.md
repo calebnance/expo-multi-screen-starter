@@ -18,6 +18,8 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 - Use of [react-native-screens](https://github.com/kmagiera/react-native-screens) (faster navigation)
 - Expo SDK 30 (will always try to keep this on the latest SDK version)
 - Preloading/caching local assets (with splash loading screen)
+- React Native specific accessibility lining w/ [react-native-a11y](https://github.com/FormidableLabs/eslint-plugin-react-native-a11y)
+  - shoutout [FormidableLabs](https://github.com/FormidableLabs) in general 👽
 - Checker for the notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
 - Simple Jest testing
 - SVG usage

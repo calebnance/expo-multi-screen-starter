@@ -1,6 +1,6 @@
 {
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["prettier"],
+  "extends": ["airbnb", "prettier", "plugin:react-native-a11y/recommended"],
+  "plugins": ["prettier", "react-native-a11y"],
   "rules": {
     "prettier/prettier": ["error"],
     "no-use-before-define": 0,
