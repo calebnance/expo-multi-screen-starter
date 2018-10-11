@@ -1,0 +1,52 @@
+{
+  "name": "expo-multi-screen-starter",
+  "version": "0.0.1",
+  "description": "react native multi screen application starter with expo",
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+  },
+  "dependencies": {
+    "expo": "^30.0.1",
+    "prop-types": "^15.6.2",
+    "react": "16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+    "react-navigation": "^2.16.0"
+  },
+  "author": "Caleb Nance",
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "expo",
+    "react-navigation"
+  ],
+  "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "jest-expo": "30.0.0",
+    "prettier": "^1.14.3",
+    "react-test-renderer": "^16.5.2"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "verbose": true
+  }
+}
