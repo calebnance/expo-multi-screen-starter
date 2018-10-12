@@ -1,14 +1,11 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { colors } from '../api/constants';
+import { ScrollView, Text, View } from 'react-native';
+import { utilStyles } from '../api/constants';
 
 const StatsScreen = () => (
-  <View style={styles.container}>
-    <ScrollView
-      style={styles.container}
-      contentContainerStyle={styles.contentContainer}
-    >
-      <Text style={styles.textStyle}>Stats Content Area</Text>
+  <View style={utilStyles.container}>
+    <ScrollView contentContainerStyle={utilStyles.contentContainer}>
+      <Text style={utilStyles.text}>Stats Content Area</Text>
     </ScrollView>
   </View>
 );
@@ -20,19 +17,5 @@ StatsScreen.navigationOptions = {
   },
   title: 'Stats'
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.brandPrimary,
-    flex: 1
-  },
-  contentContainer: {
-    alignItems: 'center',
-    paddingTop: 30
-  },
-  textStyle: {
-    color: colors.white
-  }
-});
 
 export default StatsScreen;
