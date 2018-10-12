@@ -96,6 +96,7 @@ export default createBottomTabNavigator(
     StatsStack
   },
   {
+    initialRouteName: 'HomeStack',
     tabBarOptions: {
       activeTintColor: colors.brandPrimary,
       inactiveTintColor: colors.grey
