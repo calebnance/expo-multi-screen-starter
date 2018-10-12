@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, StyleSheet, View } from 'react-native';
+import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading } from 'expo';
 import { useScreens } from 'react-native-screens';
 import AppSwitchNav from './src/navigation/AppSwitchNav';
@@ -48,7 +48,9 @@ class App extends React.Component {
 
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="dark-content" />
+        <StatusBar
+          barStyle={Platform.OS === 'ios' ? 'dark-content' : 'light-content'}
+        />
         <AppSwitchNav />
       </View>
     );
