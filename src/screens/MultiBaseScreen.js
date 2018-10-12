@@ -15,13 +15,12 @@ const MultiBaseScreen = props => {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}
       >
-        <Text style={styles.textStyle}>Multi Screens Content Area</Text>
+        <Text style={utilStyles.text}>Multi Screens Content Area</Text>
 
         <View style={utilStyles.spacer80} />
 
         <Touch
           onPress={() => navigation.navigate('MultiLevel2')}
-          style={utilStyles.btn}
           text="go to level 2"
         />
       </ScrollView>
@@ -34,6 +33,10 @@ MultiBaseScreen.navigationOptions = {
     flex: 1,
     textAlign: 'center'
   },
+  headerStyle: {
+    borderBottomWidth: 0,
+    elevation: 0
+  },
   title: 'Multi Screens'
 };
 
@@ -44,15 +47,12 @@ MultiBaseScreen.propTypes = {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.brandPrimary,
+    backgroundColor: colors.white,
     flex: 1
   },
   contentContainer: {
     alignItems: 'center',
     paddingTop: 30
-  },
-  textStyle: {
-    color: colors.white
   }
 });
 

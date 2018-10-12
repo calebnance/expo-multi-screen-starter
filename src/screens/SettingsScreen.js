@@ -1,38 +1,57 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { colors } from '../api/constants';
+import { Image, ScrollView, Text, View } from 'react-native';
+import { utilStyles } from '../api/constants';
+import appAssets from '../api/preloadAssets';
+
+const { appImages } = appAssets;
+
+const headerImage = __DEV__ ? 'rabbitDev' : 'rabbitProd';
+const headerTitle = (
+  <View style={{ flex: 1 }}>
+    <Image
+      style={{ alignSelf: 'center', height: 40, width: 40 }}
+      source={appImages[headerImage].img}
+    />
+  </View>
+);
 
 const SettingsScreen = () => (
-  <View style={styles.container}>
-    <ScrollView
-      style={styles.container}
-      contentContainerStyle={styles.contentContainer}
-    >
-      <Text style={styles.textStyle}>Settings Content Area</Text>
+  <View style={utilStyles.container}>
+    <ScrollView contentContainerStyle={utilStyles.contentContainer}>
+      <Text style={utilStyles.text}>Settings Content Area</Text>
     </ScrollView>
   </View>
 );
 
 SettingsScreen.navigationOptions = {
-  headerTitleStyle: {
-    flex: 1,
-    textAlign: 'center'
-  },
-  title: 'Settings'
+  headerLeft: (
+    <View style={{ flex: 1 }}>
+      <Text>left</Text>
+    </View>
+  ),
+  headerRight: (
+    <View style={{ flex: 1 }}>
+      <Text>right</Text>
+    </View>
+  ),
+  // title: 'Settings'
+  headerTitle
 };
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.brandPrimary,
-    flex: 1
-  },
-  contentContainer: {
-    alignItems: 'center',
-    paddingTop: 30
-  },
-  textStyle: {
-    color: colors.white
-  }
-});
+/*
+// shoutout brent: https://snack.expo.io/H105kxsG7
+const shouldShowBackButton = stackRouteNavigation => {
+  const parent = stackRouteNavigation.dangerouslyGetParent();
+  return parent.state.routes.indexOf(stackRouteNavigation.state) > 0;
+};
+
+SettingsScreen.navigationOptions = ({ navigation }) => ({
+
+headerLeft: !shouldShowBackButton(navigation) ? (
+  <View style={{ flex: 1 }}>
+    <Text>left</Text>
+  </View>
+) : null,
+*/
 
 export default SettingsScreen;

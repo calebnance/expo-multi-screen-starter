@@ -45,11 +45,9 @@ Touch.defaultProps = {
   accesTrait: 'button',
   icon: null,
   opacityActive: utilStyles.opacityActive,
-  style: {},
+  style: utilStyles.btn,
   text: '',
-  textStyle: {
-    textAlign: 'center'
-  }
+  textStyle: utilStyles.btnText
 };
 
 // type checking
