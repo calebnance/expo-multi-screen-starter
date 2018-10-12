@@ -11,6 +11,7 @@ const MultiLevel2Screen = () => (
 );
 
 MultiLevel2Screen.navigationOptions = {
+  headerRight: <View style={{ flex: 1 }} />,
   headerTitleStyle: {
     flex: 1,
     textAlign: 'center'
