@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationBack /> renders correctly 1`] = `
+<TouchableOpacity
+  accessibilityComponentType="button"
+  accessibilityLabel="go back"
+  accessibilityTraits="button"
+  accessible={true}
+  activeOpacity={0.8}
+  onPress={[Function]}
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
+>
+  <SvgCircleLeft
+    active={true}
+    height={20}
+    width={20}
+  />
+</TouchableOpacity>
+`;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Touch /> renders correctly 1`] = `
+<TouchableOpacity
+  accessibilityComponentType="button"
+  accessibilityLabel=""
+  accessibilityTraits="button"
+  accessible={true}
+  activeOpacity={0.8}
+  onPress={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "borderColor": "#1d2d3a",
+      "borderRadius": 80,
+      "borderWidth": 0.5,
+      "paddingHorizontal": 24,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#1d2d3a",
+        "textAlign": "center",
+      }
+    }
+  />
+</TouchableOpacity>
+`;
