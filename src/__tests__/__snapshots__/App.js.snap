@@ -1,3 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders correctly 1`] = `null`;
+exports[`<App /> State state: isLoading = false 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <StatusBar
+    animated={false}
+    barStyle="dark-content"
+    showHideTransition="fade"
+  />
+  <NavigationContainer />
+</Component>
+`;
+
+exports[`<App /> State state: isLoading = true 1`] = `
+<AppLoading
+  onFinish={[Function]}
+  startAsync={[Function]}
+/>
+`;
+
+exports[`<App /> renders correctly 1`] = `
+<AppLoading
+  onFinish={[Function]}
+  startAsync={[Function]}
+/>
+`;

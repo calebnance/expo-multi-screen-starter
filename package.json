@@ -16,7 +16,7 @@
     "prop-types": "^15.6.2",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
-    "react-native-screens": "^1.0.0-alpha.14",
+    "react-native-screens": "^1.0.0-alpha.15",
     "react-navigation": "^2.16.0"
   },
   "author": "Caleb Nance",
@@ -28,6 +28,9 @@
   ],
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -38,10 +41,20 @@
     "eslint-plugin-react-native-a11y": "^1.0.0",
     "jest-expo": "30.0.0",
     "prettier": "^1.14.3",
+    "react-dom": "16.2.1",
     "react-test-renderer": "^16.5.2"
   },
   "jest": {
     "preset": "jest-expo",
+    "setupFiles": [
+      "<rootDir>/src/setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-navigation|expo)/"
+    ],
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
