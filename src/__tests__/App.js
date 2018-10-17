@@ -3,6 +3,11 @@ import { shallow } from 'enzyme';
 
 import App from '../../App';
 
+// mock react-native-screens
+jest.mock('react-native-screens', () => ({
+  useScreens: jest.fn()
+}));
+
 const app = shallow(<App />);
 
 describe('<App />', () => {
