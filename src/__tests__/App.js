@@ -15,6 +15,7 @@ describe('<App /> State', () => {
   it('state: isLoading = true', () => {
     // initial state: isLoading
     expect(app.state('isLoading')).toEqual(true);
+
     expect(app).toMatchSnapshot();
   });
 
