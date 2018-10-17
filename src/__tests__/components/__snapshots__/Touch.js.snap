@@ -7,7 +7,7 @@ exports[`<Touch /> renders correctly 1`] = `
   accessibilityTraits="button"
   accessible={true}
   activeOpacity={0.8}
-  onPress={[Function]}
+  onPress={[MockFunction]}
   style={
     Object {
       "alignItems": "center",
