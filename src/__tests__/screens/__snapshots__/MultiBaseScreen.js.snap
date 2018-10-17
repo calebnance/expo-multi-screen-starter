@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiBaseScreen /> renders correctly 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <ScrollViewMock
+    contentContainerStyle={
+      Object {
+        "alignItems": "center",
+        "paddingTop": 30,
+      }
+    }
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#1d2d3a",
+        }
+      }
+    >
+      Multi Screens Content Area
+    </Text>
+    <Component
+      style={
+        Object {
+          "height": 80,
+          "width": "100%",
+        }
+      }
+    />
+    <Touch
+      accesCType="button"
+      accesLabel={null}
+      accesTrait="button"
+      accessible={true}
+      icon={null}
+      onPress={[Function]}
+      opacityActive={0.8}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#1d2d3a",
+          "borderRadius": 80,
+          "borderWidth": 0.5,
+          "paddingHorizontal": 24,
+          "paddingVertical": 8,
+        }
+      }
+      text="go to level 2"
+      textStyle={
+        Object {
+          "color": "#1d2d3a",
+          "textAlign": "center",
+        }
+      }
+    />
+  </ScrollViewMock>
+</Component>
+`;
