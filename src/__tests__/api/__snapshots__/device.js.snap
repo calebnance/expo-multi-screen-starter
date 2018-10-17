@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`device.js iPhoneX === true 1`] = `
+<AppLoading
+  onFinish={[Function]}
+  startAsync={[Function]}
+/>
+`;

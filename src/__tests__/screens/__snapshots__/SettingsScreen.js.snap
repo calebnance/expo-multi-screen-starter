@@ -29,6 +29,20 @@ exports[`<SettingsScreen /> renders correctly 1`] = `
     >
       Settings Content Area
     </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontFamily": "pacifico",
+          "fontSize": 20,
+          "marginTop": 16,
+        }
+      }
+    >
+      Pacifico Font Example
+    </Text>
   </ScrollViewMock>
 </Component>
 `;
