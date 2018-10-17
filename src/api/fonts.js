@@ -1,0 +1,5 @@
+// fonts
+// /////////////////////////////////////////////
+export default {
+  pacifico: 'pacifico'
+};

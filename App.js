@@ -3,11 +3,12 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading } from 'expo';
 import { useScreens } from 'react-native-screens';
 import AppSwitchNav from './src/navigation/AppSwitchNav';
-import { cacheImages } from './src/api/util';
+import { cacheFonts, cacheImages } from './src/api/util';
 import { colors } from './src/api/constants';
 
-// import assets to preload
-import preloadImages from './src/api/preloadAssets';
+// assets to preload
+import preloadFonts from './src/api/preloadFonts';
+import preloadImages from './src/api/preloadImages';
 
 // make screens fast and stuff
 useScreens();
@@ -25,10 +26,11 @@ class App extends React.Component {
 
   async loadAssetsAsync() {
     // preload image assets
+    const fontAssets = cacheFonts(preloadFonts);
     const imageAssets = cacheImages(preloadImages);
 
     // promise load all
-    await Promise.all([...imageAssets]).then(() => {
+    await Promise.all([...fontAssets, ...imageAssets]).then(() => {
       this.setState({ isLoading: false });
     });
   }
