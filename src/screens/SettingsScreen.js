@@ -1,16 +1,14 @@
 import React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
-import { utilStyles } from '../api/constants';
-import appAssets from '../api/preloadAssets';
-
-const { appImages } = appAssets;
+import { fonts, utilStyles } from '../api/constants';
+import appImages from '../api/preloadImages';
 
 const headerImage = __DEV__ ? 'rabbitDev' : 'rabbitProd';
 const headerTitle = (
   <View style={{ flex: 1 }}>
     <Image
       style={{ alignSelf: 'center', height: 40, width: 40 }}
-      source={appImages[headerImage].img}
+      source={appImages[headerImage]}
     />
   </View>
 );
@@ -19,6 +17,9 @@ const SettingsScreen = () => (
   <View style={utilStyles.container}>
     <ScrollView contentContainerStyle={utilStyles.contentContainer}>
       <Text style={utilStyles.text}>Settings Content Area</Text>
+      <Text style={{ fontFamily: fonts.pacifico, fontSize: 20, marginTop: 16 }}>
+        Pacifico Font Example
+      </Text>
     </ScrollView>
   </View>
 );
