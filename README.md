@@ -24,6 +24,11 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 - Simple Jest testing
 - SVG usage
 
+**Road Map**
+- `[X]` example of react navigation
+- `[X]` example of svg usage
+- `[X]` example of jest testing
+
 
 ## install
 `yarn install`
