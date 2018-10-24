@@ -58,6 +58,14 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 - ***helpful notes:***
   - for animation and delays, make sure you add: `jest.useFakeTimers();`
 
+**code coverage history**
+- 10/24/2018
+  - `90.18%` Statements 101/112
+  - `67.74%` Branches 21/31
+  - `72.41%` Functions 21/29
+  - `94.34%` Lines 100/106
+
+
 ## linting: prettier and airbnb config
 - make sure you have [prettier package](https://atom.io/packages/prettier-atom) installed on your atom/vscode editor
 - then make sure to enable these options (packages → prettier):
