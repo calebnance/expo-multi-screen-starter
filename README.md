@@ -24,6 +24,12 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 - Simple Jest testing
 - SVG usage
 
+**Current Code Coverage**
+- `90.18%` Statements 101/112
+- `67.74%` Branches 21/31
+- `72.41%` Functions 21/29
+- `94.34%` Lines 100/106
+
 **Road Map**
 - `[X]` example of react navigation
 - `[X]` example of svg usage
