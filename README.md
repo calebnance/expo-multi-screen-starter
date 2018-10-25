@@ -25,10 +25,10 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 - SVG usage
 
 **Current Code Coverage**
-- `90.18%` Statements 101/112
-- `67.74%` Branches 21/31
-- `72.41%` Functions 21/29
-- `94.34%` Lines 100/106
+- ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `90.18%` Statements 101/112
+- ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `67.74%` Branches 21/31
+- ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `72.41%` Functions 21/29
+- ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `94.34%` Lines 100/106
 
 **Road Map**
 - `[X]` example of react navigation
