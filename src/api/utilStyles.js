@@ -9,7 +9,7 @@ export default {
     backgroundColor: colors.white,
     borderColor: colors.brandPrimary,
     borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 80,
+    borderRadius: 8,
     paddingHorizontal: 24,
     paddingVertical: 8
   },

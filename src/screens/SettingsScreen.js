@@ -26,12 +26,12 @@ const SettingsScreen = () => (
 
 SettingsScreen.navigationOptions = {
   headerLeft: (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, paddingLeft: 8 }}>
       <Text>left</Text>
     </View>
   ),
   headerRight: (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, paddingRight: 8 }}>
       <Text>right</Text>
     </View>
   ),

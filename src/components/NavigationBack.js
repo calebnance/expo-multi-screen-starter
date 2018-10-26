@@ -17,7 +17,7 @@ const NavigationBack = props => {
       accessibilityTraits="button"
       activeOpacity={utilStyles.opacityActive}
       onPress={() => navigation.goBack(navigation.state.key)}
-      style={{ padding: 12 }}
+      style={{ paddingHorizontal: 8, paddingVertical: 12 }}
     >
       <SvgCircleLeft active />
     </TouchableOpacity>

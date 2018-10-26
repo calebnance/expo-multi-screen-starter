@@ -34,7 +34,7 @@ MultiBaseScreen.navigationOptions = {
     textAlign: 'center'
   },
   headerStyle: {
-    borderBottomWidth: 0,
+    borderBottomColor: 'transparent',
     elevation: 0
   },
   title: 'Multi Screens'
