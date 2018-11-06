@@ -12,12 +12,11 @@
     "test": "node ./node_modules/jest/bin/jest.js --watchAll"
   },
   "dependencies": {
-    "expo": "^30.0.1",
+    "expo": "^31.0.4",
     "prop-types": "^15.6.2",
-    "react": "16.6.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
-    "react-native-screens": "1.0.0-alpha.14",
-    "react-navigation": "^2.16.0"
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz",
+    "react-navigation": "^2.18.2"
   },
   "author": "Caleb Nance",
   "license": "MIT",
@@ -28,6 +27,7 @@
   ],
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-preset-expo": "^5.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
@@ -39,7 +39,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-react-native-a11y": "^1.0.0",
-    "jest-expo": "30.0.0",
+    "jest-expo": "^31.0.0",
     "prettier": "^1.14.3",
     "react-dom": "16.2.1",
     "react-test-renderer": "^16.5.2"
