@@ -1,9 +1,9 @@
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import { AppLoading } from 'expo';
+import { AppLoading, ScreenOrientation } from 'expo';
 import AppSwitchNav from './src/navigation/AppSwitchNav';
 import { cacheFonts, cacheImages } from './src/api/util';
-import { colors } from './src/api/constants';
+import { colors, device } from './src/api/constants';
 
 // assets to preload
 import preloadFonts from './src/api/preloadFonts';
@@ -16,6 +16,13 @@ class App extends React.Component {
     this.state = {
       isLoading: true
     };
+
+    // iPad? (TODO in future android tablet checked)
+    if (device.isTablet) {
+      ScreenOrientation.allowAsync(
+        ScreenOrientation.Orientation.ALL_BUT_UPSIDE_DOWN
+      );
+    }
 
     this.loadAssetsAsync = this.loadAssetsAsync.bind(this);
   }
