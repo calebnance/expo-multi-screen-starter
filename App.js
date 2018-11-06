@@ -1,7 +1,6 @@
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading } from 'expo';
-import { useScreens } from 'react-native-screens';
 import AppSwitchNav from './src/navigation/AppSwitchNav';
 import { cacheFonts, cacheImages } from './src/api/util';
 import { colors } from './src/api/constants';
@@ -9,9 +8,6 @@ import { colors } from './src/api/constants';
 // assets to preload
 import preloadFonts from './src/api/preloadFonts';
 import preloadImages from './src/api/preloadImages';
-
-// make screens fast and stuff
-useScreens();
 
 class App extends React.Component {
   constructor(props) {
