@@ -15,10 +15,7 @@
       "image": "src/assets/splash.png",
       "resizeMode": "cover"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": ["src/assets/**/*"],
     "androidStatusBar": {
       "backgroundColor": "#1d2d3a"
     },
