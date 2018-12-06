@@ -16,12 +16,12 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 
 - React Navigation v2
 - Use of [react-native-screens](https://github.com/kmagiera/react-native-screens) (faster navigation)
-- Expo SDK 30 (will always try to keep this on the latest SDK version)
+- Expo SDK 31 (will always try to keep this on the latest SDK version)
 - Preloading/caching local assets (with splash loading screen)
 - React Native specific accessibility linting w/ [react-native-a11y](https://github.com/FormidableLabs/eslint-plugin-react-native-a11y)
   - shoutout [FormidableLabs](https://github.com/FormidableLabs) in general 👽
-- Checker for the notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
-- Simple Jest testing
+- Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
+- Simple Jest/Enzyme testing
 - SVG usage
 
 **Current Code Coverage**
@@ -31,6 +31,8 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 - ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `94.34%` Lines 100/106
 
 **Road Map**
+- `[ ]` dynamic screen transition types (standard & modal)
+- `[X]` example of on pre-load finished, enter app animation
 - `[X]` example of react navigation
 - `[X]` example of svg usage
 - `[X]` example of jest testing
@@ -104,7 +106,14 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 
 ## release notes
 
-### version: 0.0.1 (current)
+### version: 0.0.2 (current)
+let's get fancy
+- on pre-load finished, enter app animation
+- dynamic route transitions (regular & modal)
+
+---
+
+### version: 0.0.1
 this starter for a multi screens/stack app is at a good state
 
 - react-navigation v2 ([website](https://reactnavigation.org) | [api](https://reactnavigation.org/docs/en/api-reference.html))

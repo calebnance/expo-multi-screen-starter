@@ -9,7 +9,7 @@ import { colors, device } from './src/api/constants';
 import preloadFonts from './src/api/preloadFonts';
 import preloadImages from './src/api/preloadImages';
 
-import DiamondAnimation from './src/assets/animation/diamond';
+// import DiamondAnimation from './src/assets/animation/diamond';
 
 const { Lottie } = DangerZone;
 

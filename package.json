@@ -1,6 +1,6 @@
 {
   "name": "expo-multi-screen-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react native multi screen application starter with expo",
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
