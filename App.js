@@ -68,8 +68,10 @@ class App extends React.Component {
     if (!introAnimation) {
       this.loadAnimationAsync();
     } else {
-      this.animation.reset();
-      this.animation.play();
+      setTimeout(() => {
+        this.animation.reset();
+        this.animation.play();
+      }, 0);
 
       setTimeout(() => {
         Animated.timing(splashOpacity, {
