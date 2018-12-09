@@ -8,7 +8,7 @@
 - [adding linter](#adding-linter-config-to-another-react-project)
 - [assets](#assets)
 - [device learnings](#device-learnings)
-- [release notes](#release-notes)
+- [demo & release notes](#demo-and-release-notes)
 
 Expo | React Navigation v2 | Jest | ESLint/Prettier
 
@@ -104,7 +104,7 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 - **ios:**
   - The notch on iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max is **30px** from top
 
-## release notes
+## demo and release notes
 
 ### version: 0.0.2 (current)
 let's get fancy
@@ -121,3 +121,7 @@ this starter for a multi screens/stack app is at a good state
 - utility checker for the notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
 - simple jest testing
 - svg usage
+
+<p align="left">
+  <img src="creative/multi-screens_0.0.2.gif?raw=true" width="320" />
+</p>
