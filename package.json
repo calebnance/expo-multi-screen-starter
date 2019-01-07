@@ -2,8 +2,14 @@
   "name": "expo-multi-screen-starter",
   "version": "0.0.2",
   "description": "react native multi screen application starter with expo",
+  "author": "Caleb Nance",
+  "license": "MIT",
+  "keywords": [
+    "expo",
+    "react-native",
+    "react-navigation"
+  ],
   "main": "node_modules/expo/AppEntry.js",
-  "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -12,19 +18,12 @@
     "test": "node ./node_modules/jest/bin/jest.js --watchAll"
   },
   "dependencies": {
-    "expo": "^31.0.4",
+    "expo": "^32.0.0",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-navigation": "^2.18.2"
   },
-  "author": "Caleb Nance",
-  "license": "MIT",
-  "keywords": [
-    "react-native",
-    "expo",
-    "react-navigation"
-  ],
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-preset-expo": "^5.0.0",
@@ -63,5 +62,6 @@
       "!**/vendor/**"
     ],
     "verbose": true
-  }
+  },
+  "private": true
 }
