@@ -10,19 +10,20 @@
 - [device learnings](#device-learnings)
 - [demo & release notes](#demo-and-release-notes)
 
-Expo | React Navigation v2 | Jest | ESLint/Prettier
+Expo | React Navigation v3 | Jest | ESLint/Prettier
 
 **Out of the Box**
 
-- React Navigation v2
-- Use of [react-native-screens](https://github.com/kmagiera/react-native-screens) (faster navigation)
-- Expo SDK 31 (will always try to keep this on the latest SDK version)
-- Preloading/caching local assets (with splash loading screen)
+- React Navigation v3
+- Expo SDK 32 (will always try to keep this on the latest SDK version)
+- Preloading/caching local assets
+  - with splash loading screen
+  - animation with [Lottie](https://docs.expo.io/versions/latest/sdk/lottie/) 🤯
+- SVG icon usage
 - React Native specific accessibility linting w/ [react-native-a11y](https://github.com/FormidableLabs/eslint-plugin-react-native-a11y)
   - shoutout [FormidableLabs](https://github.com/FormidableLabs) in general 👽
 - Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
 - Simple Jest/Enzyme testing
-- SVG usage
 
 **Current Code Coverage**
 - ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `90.18%` Statements 101/112
@@ -32,6 +33,7 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 
 **Road Map**
 - `[ ]` dynamic screen transition types (standard & modal)
+- `[X]` example of enter app animation
 - `[X]` example of on pre-load finished, enter app animation
 - `[X]` example of react navigation
 - `[X]` example of svg usage
@@ -42,6 +44,7 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
 `yarn install`
 
 ***note:*** *make sure you at least have node ^v10.8.0*
+
 
 ## development on a physical device
 - first, your machine and physical device should be on the same wifi connection
@@ -57,6 +60,7 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
   - **ios 11 and later:** you can open your camera app to scan the QR code, apple made the Expo peeps remove the QR scanner from the app for some reason... 🤔
   - **ios 10 and below:** i wrote about a work around to [get expo running on older iOS devices](https://blog.calebnance.com/expo/getting-expo-to-work-on-older-iphones-with-no-qr-support.html)
 - having issues? check the [installation page](https://docs.expo.io/versions/latest/introduction/installation) for any pitfalls you may have.
+
 
 ## testing with jest
 - run: `npm test`
@@ -82,9 +86,11 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
   - automatic format on save (toggle format on save)
 - be aware of the `.prettierignore` file
 
+
 ## helpful links
 - [using nvm](https://davidwalsh.name/nvm)
 - [setup prettier/eslint within project](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a)
+
 
 ## adding linter config to another react project
 - yarn:
@@ -96,27 +102,31 @@ Expo | React Navigation v2 | Jest | ESLint/Prettier
   - `.prettierignore`
   - `.prettierrc`
 
+
 ## assets
 - [black rabbit icon](https://thenounproject.com/search/?q=rabbit&i=1211060) was bought (royalty-free license)
 - SVG Icons from [icomoon](https://icomoon.io)
 
+
 ## device learnings
 - **ios:**
-  - The notch on iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max is **30px** from top
+  - The notch on iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max is **30pt** from top
+
 
 ## demo and release notes
 
 ### version: 0.0.2 (current)
-let's get fancy
-- on pre-load finished, enter app animation
-- dynamic route transitions (regular & modal)
+**let's get fancy**
+
+- on pre-load finished, enter app animation with [Expo Lottie](https://docs.expo.io/versions/latest/sdk/lottie/)
+- React Navigation v3 ([api](https://reactnavigation.org/docs/en/api-reference.html) | [docs](https://reactnavigation.org/docs/en/getting-started.html))
 
 ---
 
 ### version: 0.0.1
 this starter for a multi screens/stack app is at a good state
 
-- react-navigation v2 ([website](https://reactnavigation.org) | [api](https://reactnavigation.org/docs/en/api-reference.html))
+- React Navigation v2 ([api](https://reactnavigation.org/docs/en/2.x/api-reference.html) | [docs](https://reactnavigation.org/docs/en/2.x/getting-started.html))
 - preloading/caching local images (with splash loading screen)
 - utility checker for the notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
 - simple jest testing
@@ -125,3 +135,6 @@ this starter for a multi screens/stack app is at a good state
 <p align="left">
   <img src="creative/multi-screens_0.0.2.gif?raw=true" width="320" />
 </p>
+
+## TODO
+- Use of [react-native-screens](https://github.com/kmagiera/react-native-screens) (faster navigation)
