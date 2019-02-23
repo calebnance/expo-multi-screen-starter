@@ -22,7 +22,7 @@
     "prop-types": "^15.6.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-navigation": "^2.18.2"
+    "react-navigation": "^3.3.0"
   },
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",

@@ -1,7 +1,11 @@
-import { createSwitchNavigator } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import TabsNav from './TabsNav';
 
-export default createSwitchNavigator({
+const SwitchNavigator = createSwitchNavigator({
   Main: TabsNav
 });
+
+const App = createAppContainer(SwitchNavigator);
+
+export default App;

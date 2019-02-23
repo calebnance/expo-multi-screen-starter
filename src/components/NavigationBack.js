@@ -6,25 +6,20 @@ import { utilStyles } from '../api/constants';
 // grab svg icon
 import SvgCircleLeft from './icons/Svg.CircleLeft';
 
-const NavigationBack = props => {
-  const { navigation } = props;
+const NavigationBack = ({ navigation }) => (
+  <TouchableOpacity
+    accessible
+    accessibilityLabel="go back"
+    accessibilityComponentType="button"
+    accessibilityTraits="button"
+    activeOpacity={utilStyles.opacityActive}
+    onPress={() => navigation.goBack(navigation.state.key)}
+    style={{ paddingHorizontal: 16, paddingVertical: 8 }}
+  >
+    <SvgCircleLeft active />
+  </TouchableOpacity>
+);
 
-  return (
-    <TouchableOpacity
-      accessible
-      accessibilityLabel="go back"
-      accessibilityComponentType="button"
-      accessibilityTraits="button"
-      activeOpacity={utilStyles.opacityActive}
-      onPress={() => navigation.goBack(navigation.state.key)}
-      style={{ paddingHorizontal: 8, paddingVertical: 12 }}
-    >
-      <SvgCircleLeft active />
-    </TouchableOpacity>
-  );
-};
-
-// type checking
 NavigationBack.propTypes = {
   // required
   navigation: PropTypes.object.isRequired

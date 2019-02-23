@@ -11,6 +11,7 @@
     "__DEV__": 0,
     "describe": 0,
     "expect": 0,
+    "fetch": 0,
     "it": 0,
     "jest": 0
   }

@@ -1,16 +1,16 @@
 import React from 'react';
 import { Animated, Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, DangerZone, ScreenOrientation } from 'expo';
+import { colors, device, func } from './src/api/constants';
+
+// get react navigation switch
 import AppSwitchNav from './src/navigation/AppSwitchNav';
-import { cacheFonts, cacheImages } from './src/api/util';
-import { colors, device } from './src/api/constants';
 
 // assets to preload
 import preloadFonts from './src/api/preloadFonts';
 import preloadImages from './src/api/preloadImages';
 
-// import DiamondAnimation from './src/assets/animation/diamond';
-
+// danger zone
 const { Lottie } = DangerZone;
 
 class App extends React.Component {
@@ -42,8 +42,8 @@ class App extends React.Component {
 
   async loadAssetsAsync() {
     // preload image assets
-    const fontAssets = cacheFonts(preloadFonts);
-    const imageAssets = cacheImages(preloadImages);
+    const fontAssets = func.cacheFonts(preloadFonts);
+    const imageAssets = func.cacheImages(preloadImages);
 
     // promise load all
     await Promise.all([...fontAssets, ...imageAssets]).then(() => {
@@ -56,9 +56,7 @@ class App extends React.Component {
       'https://s3.amazonaws.com/calebnance/react-native/animations/diamond.json';
     const result = await fetch(path)
       .then(data => data.json())
-      .catch(error => {
-        console.error(error);
-      });
+      .catch(error => console.error(error));
     this.setState({ introAnimation: result }, this.playAnimation);
   }
 
@@ -73,19 +71,17 @@ class App extends React.Component {
         this.animation.play();
       }, 0);
 
+      // start to fade the animation out before it's completely finished
       setTimeout(() => {
         Animated.timing(splashOpacity, {
           toValue: 0
         }).start(() => {
-          console.log('finished');
+          console.log('animation finished');
+          this.setState({
+            showSplash: false
+          });
         });
       }, 1700);
-
-      setTimeout(() => {
-        this.setState({
-          showSplash: false
-        });
-      }, 2200);
     }
   }
 
@@ -107,35 +103,24 @@ class App extends React.Component {
         <StatusBar
           barStyle={Platform.OS === 'ios' ? 'dark-content' : 'light-content'}
         />
+        <AppSwitchNav />
         {introAnimation &&
           showSplash && (
             <Animated.View
-              style={{
-                backgroundColor: colors.brandPrimary,
-                height: '100%',
-                justifyContent: 'center',
-                opacity: splashOpacity,
-                position: 'absolute',
-                width: '100%',
-                zIndex: 1
-              }}
+              style={[styles.containerSplash, { opacity: splashOpacity }]}
             >
-              <View style={{ alignSelf: 'center' }}>
+              <View style={styles.alignCenter}>
                 <Lottie
                   ref={animation => {
                     this.animation = animation;
                   }}
                   loop={false}
-                  style={{
-                    height: device.height,
-                    width: device.width
-                  }}
+                  style={styles.lottie}
                   source={introAnimation}
                 />
               </View>
             </Animated.View>
           )}
-        <AppSwitchNav />
       </View>
     );
   }
@@ -145,6 +130,20 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
     flex: 1
+  },
+  containerSplash: {
+    backgroundColor: colors.brandPrimary,
+    height: '100%',
+    justifyContent: 'center',
+    position: 'absolute',
+    width: '100%'
+  },
+  alignCenter: {
+    alignSelf: 'center'
+  },
+  lottie: {
+    height: device.height,
+    width: device.width
   }
 });
 
