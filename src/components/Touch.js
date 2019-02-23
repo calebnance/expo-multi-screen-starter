@@ -35,7 +35,6 @@ class Touch extends React.PureComponent {
   }
 }
 
-// default props
 Touch.defaultProps = {
   accessible: true,
   accesLabel: null,
@@ -50,7 +49,6 @@ Touch.defaultProps = {
   textStyle: utilStyles.btnText
 };
 
-// type checking
 Touch.propTypes = {
   // required
   onPress: PropTypes.func.isRequired,
