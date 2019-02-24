@@ -23,10 +23,7 @@ exports[`<MultiBaseScreen /> renders correctly 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <Component
       style={
         Object {
           "color": "#1d2d3a",
@@ -34,7 +31,7 @@ exports[`<MultiBaseScreen /> renders correctly 1`] = `
       }
     >
       Multi Screens Content Area
-    </Text>
+    </Component>
     <Component
       style={
         Object {
@@ -54,10 +51,12 @@ exports[`<MultiBaseScreen /> renders correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#fff",
+          "backgroundColor": "#1d2d3a",
           "borderColor": "#1d2d3a",
-          "borderRadius": 80,
+          "borderRadius": 4,
           "borderWidth": 0.5,
+          "height": 48,
+          "justifyContent": "center",
           "paddingHorizontal": 24,
           "paddingVertical": 8,
         }
@@ -65,7 +64,7 @@ exports[`<MultiBaseScreen /> renders correctly 1`] = `
       text="go to level 2"
       textStyle={
         Object {
-          "color": "#1d2d3a",
+          "color": "#fff",
           "textAlign": "center",
         }
       }

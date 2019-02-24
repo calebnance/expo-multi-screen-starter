@@ -17,10 +17,7 @@ exports[`<MultiLevel2Screen /> renders correctly 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <Component
       style={
         Object {
           "color": "#1d2d3a",
@@ -28,7 +25,7 @@ exports[`<MultiLevel2Screen /> renders correctly 1`] = `
       }
     >
       Multi Screens :: Level 2 Content Area
-    </Text>
+    </Component>
   </ScrollViewMock>
 </Component>
 `;

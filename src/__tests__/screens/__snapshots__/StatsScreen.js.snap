@@ -17,10 +17,7 @@ exports[`<StatsScreen /> renders correctly 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <Component
       style={
         Object {
           "color": "#1d2d3a",
@@ -28,7 +25,7 @@ exports[`<StatsScreen /> renders correctly 1`] = `
       }
     >
       Stats Content Area
-    </Text>
+    </Component>
   </ScrollViewMock>
 </Component>
 `;
