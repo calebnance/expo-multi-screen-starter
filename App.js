@@ -64,7 +64,7 @@ class App extends React.Component {
     const { introAnimation, splashOpacity } = this.state;
 
     if (!introAnimation) {
-      this.loadAnimationAsync();
+      if (!device.isWeb) this.loadAnimationAsync();
     } else {
       setTimeout(() => {
         this.animation.reset();
@@ -76,7 +76,7 @@ class App extends React.Component {
         Animated.timing(splashOpacity, {
           toValue: 0
         }).start(() => {
-          console.log('animation finished');
+          // console.log('animation finished');
           this.setState({
             showSplash: false
           });
@@ -104,23 +104,22 @@ class App extends React.Component {
           barStyle={Platform.OS === 'ios' ? 'dark-content' : 'light-content'}
         />
         <AppSwitchNav />
-        {introAnimation &&
-          showSplash && (
-            <Animated.View
-              style={[styles.containerSplash, { opacity: splashOpacity }]}
-            >
-              <View style={styles.alignCenter}>
-                <Lottie
-                  ref={animation => {
-                    this.animation = animation;
-                  }}
-                  loop={false}
-                  style={styles.lottie}
-                  source={introAnimation}
-                />
-              </View>
-            </Animated.View>
-          )}
+        {introAnimation && showSplash && (
+          <Animated.View
+            style={[styles.containerSplash, { opacity: splashOpacity }]}
+          >
+            <View style={styles.alignCenter}>
+              <Lottie
+                ref={animation => {
+                  this.animation = animation;
+                }}
+                loop={false}
+                style={styles.lottie}
+                source={introAnimation}
+              />
+            </View>
+          </Animated.View>
+        )}
       </View>
     );
   }
