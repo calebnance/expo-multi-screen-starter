@@ -14,15 +14,19 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
+    "web": "expo start --web",
+    "web-build": "expo build:web",
+    "web-build-no-poly": "expo build:web --no-polyfill",
     "eject": "expo eject",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll"
   },
   "dependencies": {
-    "expo": "^32.0.0",
+    "expo": "^33.0.0-alpha.web.1",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-navigation": "^3.3.0"
+    "react-native-web": "^0.11.1",
+    "react-navigation": "^3.5.0-alpha.0"
   },
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",
@@ -40,7 +44,7 @@
     "eslint-plugin-react-native-a11y": "^1.0.0",
     "jest-expo": "^32.0.0",
     "prettier": "^1.14.3",
-    "react-dom": "^16.8.3",
+    "react-dom": "^16.8.4",
     "react-test-renderer": "^16.5.2"
   },
   "jest": {
