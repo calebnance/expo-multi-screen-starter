@@ -1,16 +1,18 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import StatsScreen from '../../screens/StatsScreen';
+import SettingsScreen from '../SettingsScreen';
 
 const navigation = {
   goBack: jest.fn(),
   navigate: jest.fn()
 };
 
-const tree = renderer.create(<StatsScreen navigation={navigation} />).toJSON();
+const tree = renderer
+  .create(<SettingsScreen navigation={navigation} />)
+  .toJSON();
 
-describe('<StatsScreen />', () => {
+describe('<SettingsScreen />', () => {
   it('renders correctly', () => {
     expect(tree).toMatchSnapshot();
   });

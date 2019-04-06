@@ -1,16 +1,18 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import HomeScreen from '../../screens/HomeScreen';
+import MultiBaseScreen from '../MultiBaseScreen';
 
 const navigation = {
   goBack: jest.fn(),
   navigate: jest.fn()
 };
 
-const tree = renderer.create(<HomeScreen navigation={navigation} />).toJSON();
+const tree = renderer
+  .create(<MultiBaseScreen navigation={navigation} />)
+  .toJSON();
 
-describe('<HomeScreen />', () => {
+describe('<MultiBaseScreen />', () => {
   it('renders correctly', () => {
     expect(tree).toMatchSnapshot();
   });

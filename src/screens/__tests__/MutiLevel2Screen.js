@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import NavigationBack from '../../components/NavigationBack';
+import MultiLevel2Screen from '../MultiLevel2Screen';
 
 const navigation = {
   goBack: jest.fn(),
@@ -9,15 +9,11 @@ const navigation = {
 };
 
 const tree = renderer
-  .create(<NavigationBack navigation={navigation} />)
+  .create(<MultiLevel2Screen navigation={navigation} />)
   .toJSON();
 
-describe('<NavigationBack />', () => {
+describe('<MultiLevel2Screen />', () => {
   it('renders correctly', () => {
     expect(tree).toMatchSnapshot();
-  });
-
-  it('has 1 child', () => {
-    expect(tree.children.length).toBe(1);
   });
 });

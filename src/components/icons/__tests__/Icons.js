@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import SvgCircleLeft from '../../components/icons/Svg.CircleLeft';
-import SvgCog from '../../components/icons/Svg.Cog';
-import SvgHome from '../../components/icons/Svg.Home';
-import SvgPages from '../../components/icons/Svg.Pages';
-import SvgStats from '../../components/icons/Svg.Stats';
+import SvgCircleLeft from '../Svg.CircleLeft';
+import SvgCog from '../Svg.Cog';
+import SvgHome from '../Svg.Home';
+import SvgPages from '../Svg.Pages';
+import SvgStats from '../Svg.Stats';
 
 describe('SVG Icons', () => {
   it('<SvgCircleLeft /> renders correctly', () => {

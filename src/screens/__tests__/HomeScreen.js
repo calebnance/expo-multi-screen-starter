@@ -1,18 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import MultiLevel2Screen from '../../screens/MultiLevel2Screen';
+import HomeScreen from '../HomeScreen';
 
 const navigation = {
   goBack: jest.fn(),
   navigate: jest.fn()
 };
 
-const tree = renderer
-  .create(<MultiLevel2Screen navigation={navigation} />)
-  .toJSON();
+const tree = renderer.create(<HomeScreen navigation={navigation} />).toJSON();
 
-describe('<MultiLevel2Screen />', () => {
+describe('<HomeScreen />', () => {
   it('renders correctly', () => {
     expect(tree).toMatchSnapshot();
   });

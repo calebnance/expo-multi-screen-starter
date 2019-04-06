@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import SettingsScreen from '../../screens/SettingsScreen';
+import NavigationBack from '../NavigationBack';
 
 const navigation = {
   goBack: jest.fn(),
@@ -9,11 +9,15 @@ const navigation = {
 };
 
 const tree = renderer
-  .create(<SettingsScreen navigation={navigation} />)
+  .create(<NavigationBack navigation={navigation} />)
   .toJSON();
 
-describe('<SettingsScreen />', () => {
+describe('<NavigationBack />', () => {
   it('renders correctly', () => {
     expect(tree).toMatchSnapshot();
+  });
+
+  it('has 1 child', () => {
+    expect(tree.children.length).toBe(1);
   });
 });
