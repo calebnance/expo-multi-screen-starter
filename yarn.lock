@@ -1493,6 +1493,10 @@ buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
 
+builtin-modules@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -2084,6 +2088,15 @@ eslint-module-utils@^2.3.0:
     debug "^2.6.8"
     pkg-dir "^2.0.0"
 
+eslint-plugin-import-helpers@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import-helpers/-/eslint-plugin-import-helpers-0.1.4.tgz#91b61713c382ec4b1ca6ca2e71e7a8024f6b963b"
+  dependencies:
+    builtin-modules "^1.1.1"
+    eslint-import-resolver-node "^0.3.2"
+    eslint-module-utils "^2.3.0"
+    lodash.cond "^4.5.2"
+
 eslint-plugin-import@^2.14.0:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.16.0.tgz#97ac3e75d0791c4fac0e15ef388510217be7f66f"
@@ -2117,13 +2130,6 @@ eslint-plugin-prettier@^3.0.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.0.1.tgz#19d521e3981f69dd6d14f64aec8c6a6ac6eb0b0d"
   dependencies:
     prettier-linter-helpers "^1.0.0"
-
-eslint-plugin-react-native-a11y@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-native-a11y/-/eslint-plugin-react-native-a11y-1.2.0.tgz#7d128d1e36c81d1418b54745a7fdac6baee1038f"
-  dependencies:
-    ast-types-flow "^0.0.7"
-    jsx-ast-utils "^2.0.1"
 
 eslint-plugin-react@^7.11.1:
   version "7.12.4"
@@ -4072,6 +4078,10 @@ locate-path@^2.0.0:
   dependencies:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
+
+lodash.cond@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
 
 lodash.filter@^4.6.0:
   version "4.6.0"

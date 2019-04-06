@@ -1,6 +1,6 @@
 {
-  "extends": ["airbnb", "prettier", "plugin:react-native-a11y/recommended"],
-  "plugins": ["prettier", "react-native-a11y"],
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier", "eslint-plugin-import-helpers"],
   "rules": {
     "prettier/prettier": ["error"],
     "no-use-before-define": 0,

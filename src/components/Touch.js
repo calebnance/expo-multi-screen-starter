@@ -7,9 +7,6 @@ class Touch extends React.PureComponent {
   render() {
     const {
       accessible,
-      accesLabel,
-      accesCType,
-      accesTrait,
       icon,
       opacityActive,
       onPress,
@@ -21,9 +18,6 @@ class Touch extends React.PureComponent {
     return (
       <TouchableOpacity
         accessible={accessible}
-        accessibilityLabel={accesLabel || text}
-        accessibilityComponentType={accesCType}
-        accessibilityTraits={accesTrait}
         activeOpacity={opacityActive}
         onPress={onPress}
         style={style}
@@ -37,11 +31,6 @@ class Touch extends React.PureComponent {
 
 Touch.defaultProps = {
   accessible: true,
-  accesLabel: null,
-  // android: https://facebook.github.io/react-native/docs/accessibility.html#accessibilitycomponenttype-android
-  accesCType: 'button',
-  // ios: https://facebook.github.io/react-native/docs/accessibility.html#accessibilitytraits-ios
-  accesTrait: 'button',
   icon: null,
   opacityActive: utilStyles.opacityActive,
   style: utilStyles.btn,
@@ -55,9 +44,6 @@ Touch.propTypes = {
 
   // optional
   accessible: PropTypes.bool,
-  accesLabel: PropTypes.string,
-  accesTrait: PropTypes.string,
-  accesCType: PropTypes.string,
   icon: PropTypes.element,
   opacityActive: PropTypes.number,
   style: PropTypes.oneOfType([

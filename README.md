@@ -41,7 +41,7 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
 
 
 ## install
-`yarn install`
+`yarn` or `yarn install`
 
 ***note:*** *make sure you at least have node ^v10.8.0*
 
@@ -51,7 +51,7 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
 - make sure you have Expo CLI installed globally, if not run:
   - `yarn install -g expo-cli`
 - then navigate to this project's directory on your machine and run:
-  - `expo start`
+  - `yarn dev` or `expo start`
 - now download the Expo Client app on your preferred physical device:
   - **Android:** [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent)
   - **Apple:** [App Store](https://itunes.apple.com/us/app/expo-client/id982107779)
