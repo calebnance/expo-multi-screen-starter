@@ -20,8 +20,6 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
   - with splash loading screen
   - animation with [Lottie](https://docs.expo.io/versions/latest/sdk/lottie/) 🤯
 - SVG icon usage
-- React Native specific accessibility linting w/ [react-native-a11y](https://github.com/FormidableLabs/eslint-plugin-react-native-a11y)
-  - shoutout [FormidableLabs](https://github.com/FormidableLabs) in general 👽
 - Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
 - Simple Jest/Enzyme testing
 
@@ -116,8 +114,7 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
 
 
 ## device learnings
-- **ios:**
-  - The notch on iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max is **30pt** from top
+- **ios:** The notch on iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max is **30pt** from top
 
 
 ## demo and release notes
@@ -142,6 +139,3 @@ this starter for a multi screens/stack app is at a good state
 <p align="left">
   <img src="creative/multi-screens_0.0.2.gif?raw=true" width="320" />
 </p>
-
-## TODO
-- Use of [react-native-screens](https://github.com/kmagiera/react-native-screens) (faster navigation)
