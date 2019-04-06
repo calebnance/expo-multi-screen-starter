@@ -49,7 +49,7 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
 ## development on a physical device
 - first, your machine and physical device should be on the same wifi connection
 - make sure you have Expo CLI installed globally, if not run:
-  - `npm install -g expo-cli`
+  - `yarn install -g expo-cli`
 - then navigate to this project's directory on your machine and run:
   - `expo start`
 - now download the Expo Client app on your preferred physical device:
@@ -63,12 +63,19 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
 
 
 ## testing with jest
-- run: `npm test`
-- this will generate
-  - a report within the console
-  - a html code coverage report within `/coverage/`
-- ***helpful notes:***
-  - for animation and delays, make sure you add: `jest.useFakeTimers();`
+- `yarn test`
+  - **"jest --watch --coverage=false --changedSince=origin/master"**
+- `yarn testDebug`
+  - **"jest -o --watch --coverage=false"**
+- `yarn testFinal`
+  - **"jest"**
+  - this will generate
+    - a report within the console
+    - a html code coverage report within `/coverage/`
+- `yarn updateSnapshots`
+  - **"jest -u --coverage=false"**
+
+***helpful notes:*** for animation and delays, make sure you add: `jest.useFakeTimers();`
 
 **code coverage history**
 - 10/24/2018
