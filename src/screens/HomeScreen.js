@@ -7,24 +7,20 @@ import { utilStyles } from '../api/constants';
 // grab component
 import Touch from '../components/Touch';
 
-const HomeScreen = props => {
-  const { navigation } = props;
+const HomeScreen = ({ navigation }) => (
+  <SafeAreaView style={utilStyles.container}>
+    <ScrollView contentContainerStyle={utilStyles.contentContainer}>
+      <Text style={utilStyles.text}>Home Content Area</Text>
 
-  return (
-    <SafeAreaView style={utilStyles.container}>
-      <ScrollView contentContainerStyle={utilStyles.contentContainer}>
-        <Text style={utilStyles.text}>Home Content Area</Text>
+      <View style={utilStyles.spacer80} />
 
-        <View style={utilStyles.spacer80} />
-
-        <Touch
-          onPress={() => navigation.navigate('MultiBase')}
-          text="jump to Multi tab"
-        />
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+      <Touch
+        onPress={() => navigation.navigate('MultiBase')}
+        text="jump to Multi tab"
+      />
+    </ScrollView>
+  </SafeAreaView>
+);
 
 HomeScreen.navigationOptions = {
   header: null

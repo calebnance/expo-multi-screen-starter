@@ -3,36 +3,20 @@ import { Text, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import { utilStyles } from '../api/constants';
 
-class Touch extends React.PureComponent {
-  render() {
-    const {
-      accessible,
-      icon,
-      opacityActive,
-      onPress,
-      style,
-      text,
-      textStyle
-    } = this.props;
-
-    return (
-      <TouchableOpacity
-        accessible={accessible}
-        activeOpacity={opacityActive}
-        onPress={onPress}
-        style={style}
-      >
-        {icon && icon}
-        <Text style={textStyle}>{text}</Text>
-      </TouchableOpacity>
-    );
-  }
-}
+const Touch = ({ accessible, activeO, onPress, style, text, textStyle }) => (
+  <TouchableOpacity
+    accessible={accessible}
+    activeOpacity={activeO}
+    onPress={onPress}
+    style={style}
+  >
+    <Text style={textStyle}>{text}</Text>
+  </TouchableOpacity>
+);
 
 Touch.defaultProps = {
   accessible: true,
-  icon: null,
-  opacityActive: utilStyles.opacityActive,
+  activeO: utilStyles.activeO,
   style: utilStyles.btn,
   text: '',
   textStyle: utilStyles.btnText
@@ -44,8 +28,7 @@ Touch.propTypes = {
 
   // optional
   accessible: PropTypes.bool,
-  icon: PropTypes.element,
-  opacityActive: PropTypes.number,
+  activeO: PropTypes.number,
   style: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.number,

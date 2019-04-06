@@ -12,7 +12,7 @@ const NavigationBack = ({ navigation }) => (
     accessibilityLabel="go back"
     accessibilityComponentType="button"
     accessibilityTraits="button"
-    activeOpacity={utilStyles.opacityActive}
+    activeOpacity={utilStyles.activeO}
     onPress={() => navigation.goBack(navigation.state.key)}
     style={{ paddingHorizontal: 16, paddingVertical: 8 }}
   >

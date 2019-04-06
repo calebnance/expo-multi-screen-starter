@@ -27,8 +27,8 @@ export default {
     alignItems: 'center',
     paddingTop: 30
   },
-  opacityActive: 0.8,
-  opacityActiveFull: 1,
+  activeO: 0.8,
+  activeOFull: 1,
   spacer80: {
     height: 80,
     width: '100%'

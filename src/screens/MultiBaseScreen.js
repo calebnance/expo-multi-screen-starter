@@ -6,27 +6,23 @@ import { colors, utilStyles } from '../api/constants';
 // grab component
 import Touch from '../components/Touch';
 
-const MultiBaseScreen = props => {
-  const { navigation } = props;
+const MultiBaseScreen = ({ navigation }) => (
+  <View style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainer}
+    >
+      <Text style={utilStyles.text}>Multi Screens Content Area</Text>
 
-  return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}
-      >
-        <Text style={utilStyles.text}>Multi Screens Content Area</Text>
+      <View style={utilStyles.spacer80} />
 
-        <View style={utilStyles.spacer80} />
-
-        <Touch
-          onPress={() => navigation.navigate('MultiLevel2')}
-          text="go to level 2"
-        />
-      </ScrollView>
-    </View>
-  );
-};
+      <Touch
+        onPress={() => navigation.navigate('MultiLevel2')}
+        text="go to level 2"
+      />
+    </ScrollView>
+  </View>
+);
 
 MultiBaseScreen.navigationOptions = {
   headerTitleStyle: {
