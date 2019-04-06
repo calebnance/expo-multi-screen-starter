@@ -1,20 +1,19 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import MultiBaseScreen from '../../screens/MultiBaseScreen';
 
-const navigation = { navigate: jest.fn() };
-const screen = shallow(<MultiBaseScreen navigation={navigation} />);
+const navigation = {
+  goBack: jest.fn(),
+  navigate: jest.fn()
+};
+
+const tree = renderer
+  .create(<MultiBaseScreen navigation={navigation} />)
+  .toJSON();
 
 describe('<MultiBaseScreen />', () => {
   it('renders correctly', () => {
-    expect(screen).toMatchSnapshot();
-  });
-
-  it('onPress', () => {
-    screen
-      .find('Touch')
-      .props()
-      .onPress();
+    expect(tree).toMatchSnapshot();
   });
 });

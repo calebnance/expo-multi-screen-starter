@@ -1,13 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Touch /> renders correctly 1`] = `
-<TouchableOpacity
-  accessibilityComponentType="button"
+<View
   accessibilityLabel=""
-  accessibilityTraits="button"
   accessible={true}
-  activeOpacity={0.8}
-  onPress={[MockFunction]}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -17,18 +20,21 @@ exports[`<Touch /> renders correctly 1`] = `
       "borderWidth": 0.5,
       "height": 48,
       "justifyContent": "center",
+      "opacity": 1,
       "paddingHorizontal": 24,
       "paddingVertical": 8,
     }
   }
 >
-  <Component
+  <Text
     style={
       Object {
         "color": "#fff",
         "textAlign": "center",
       }
     }
-  />
-</TouchableOpacity>
+  >
+    
+  </Text>
+</View>
 `;

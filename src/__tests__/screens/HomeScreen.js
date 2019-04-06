@@ -1,20 +1,17 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import HomeScreen from '../../screens/HomeScreen';
 
-const navigation = { navigate: jest.fn() };
-const screen = shallow(<HomeScreen navigation={navigation} />);
+const navigation = {
+  goBack: jest.fn(),
+  navigate: jest.fn()
+};
+
+const tree = renderer.create(<HomeScreen navigation={navigation} />).toJSON();
 
 describe('<HomeScreen />', () => {
   it('renders correctly', () => {
-    expect(screen).toMatchSnapshot();
-  });
-
-  it('onPress', () => {
-    screen
-      .find('Touch')
-      .props()
-      .onPress();
+    expect(tree).toMatchSnapshot();
   });
 });

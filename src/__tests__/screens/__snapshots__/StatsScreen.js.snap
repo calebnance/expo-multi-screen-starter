@@ -1,31 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StatsScreen /> renders correctly 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
       "flex": 1,
     }
   }
->
-  <ScrollViewMock
-    contentContainerStyle={
-      Object {
-        "alignItems": "center",
-        "paddingTop": 30,
-      }
-    }
-  >
-    <Component
-      style={
-        Object {
-          "color": "#1d2d3a",
-        }
-      }
-    >
-      Stats Content Area
-    </Component>
-  </ScrollViewMock>
-</Component>
+/>
 `;

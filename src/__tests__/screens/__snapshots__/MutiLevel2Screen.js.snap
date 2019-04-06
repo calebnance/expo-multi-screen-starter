@@ -1,31 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MultiLevel2Screen /> renders correctly 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
       "flex": 1,
     }
   }
->
-  <ScrollViewMock
-    contentContainerStyle={
-      Object {
-        "alignItems": "center",
-        "paddingTop": 30,
-      }
-    }
-  >
-    <Component
-      style={
-        Object {
-          "color": "#1d2d3a",
-        }
-      }
-    >
-      Multi Screens :: Level 2 Content Area
-    </Component>
-  </ScrollViewMock>
-</Component>
+/>
 `;

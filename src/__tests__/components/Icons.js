@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import SvgCircleLeft from '../../components/icons/Svg.CircleLeft';
 import SvgCog from '../../components/icons/Svg.Cog';
@@ -7,30 +7,29 @@ import SvgHome from '../../components/icons/Svg.Home';
 import SvgPages from '../../components/icons/Svg.Pages';
 import SvgStats from '../../components/icons/Svg.Stats';
 
-const iconCircleLeft = shallow(<SvgCircleLeft />);
-const iconCog = shallow(<SvgCog />);
-const iconHome = shallow(<SvgHome />);
-const iconPages = shallow(<SvgPages />);
-const iconStats = shallow(<SvgStats />);
-
 describe('SVG Icons', () => {
   it('<SvgCircleLeft /> renders correctly', () => {
-    expect(iconCircleLeft).toMatchSnapshot();
+    const tree = renderer.create(<SvgCircleLeft />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('<SvgCog /> renders correctly', () => {
-    expect(iconCog).toMatchSnapshot();
+    const tree = renderer.create(<SvgCog />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('<SvgHome /> renders correctly', () => {
-    expect(iconHome).toMatchSnapshot();
+    const tree = renderer.create(<SvgHome />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('<SvgPages /> renders correctly', () => {
-    expect(iconPages).toMatchSnapshot();
+    const tree = renderer.create(<SvgPages />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('<SvgStats /> renders correctly', () => {
-    expect(iconStats).toMatchSnapshot();
+    const tree = renderer.create(<SvgStats />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

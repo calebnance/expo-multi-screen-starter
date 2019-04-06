@@ -1,23 +1,23 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import NavigationBack from '../../components/NavigationBack';
 
 const navigation = {
   goBack: jest.fn(),
-  navigate: jest.fn(),
-  state: {
-    key: 1
-  }
+  navigate: jest.fn()
 };
-const component = shallow(<NavigationBack navigation={navigation} />);
+
+const tree = renderer
+  .create(<NavigationBack navigation={navigation} />)
+  .toJSON();
 
 describe('<NavigationBack />', () => {
   it('renders correctly', () => {
-    expect(component).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 
-  it('onPress', () => {
-    component.props().onPress();
+  it('has 1 child', () => {
+    expect(tree.children.length).toBe(1);
   });
 });

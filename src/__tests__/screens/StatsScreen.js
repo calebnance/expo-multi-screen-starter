@@ -1,13 +1,17 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import StatsScreen from '../../screens/StatsScreen';
 
-const navigation = { navigate: jest.fn() };
-const screen = shallow(<StatsScreen navigation={navigation} />);
+const navigation = {
+  goBack: jest.fn(),
+  navigate: jest.fn()
+};
+
+const tree = renderer.create(<StatsScreen navigation={navigation} />).toJSON();
 
 describe('<StatsScreen />', () => {
   it('renders correctly', () => {
-    expect(screen).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 });

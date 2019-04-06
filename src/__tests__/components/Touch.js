@@ -1,15 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import Touch from '../../components/Touch';
 
+const tree = renderer.create(<Touch onPress={jest.fn()} />).toJSON();
+
 describe('<Touch />', () => {
   it('renders correctly', () => {
-    const onPressEvent = jest.fn();
-    onPressEvent.mockReturnValue('Touch on press invoked');
-
-    const component = shallow(<Touch onPress={onPressEvent} />);
-
-    expect(component).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 });
