@@ -1,4 +1,4 @@
-# React Native Multi Screen Starter with Expo
+# Multi Screen Starter with Expo
 
 - [install](#install)
 - [development on a physical device](#development-on-a-physical-device)
