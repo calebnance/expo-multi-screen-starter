@@ -133,7 +133,7 @@ this starter for a multi screens/stack app is at a good state
 - React Navigation v2 ([api](https://reactnavigation.org/docs/en/2.x/api-reference.html) | [docs](https://reactnavigation.org/docs/en/2.x/getting-started.html))
 - preloading/caching local images (with splash loading screen)
 - utility checker for the notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
-- simple jest testing
+- simple jest tests
 - svg usage
 
 <p align="left">
