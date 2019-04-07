@@ -21,7 +21,7 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
   - animation with [Lottie](https://docs.expo.io/versions/latest/sdk/lottie/) 🤯
 - SVG icon usage
 - Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
-- Simple Jest/Enzyme testing
+- Simple Jest testing
 
 **Current Code Coverage**
 - ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `90.18%` Statements 101/112
