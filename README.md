@@ -47,7 +47,7 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
 ## development on a physical device
 - first, your machine and physical device should be on the same wifi connection
 - make sure you have Expo CLI installed globally, if not run:
-  - `yarn install -g expo-cli`
+  - `npm install -g expo-cli`
 - then navigate to this project's directory on your machine and run:
   - `yarn dev` or `expo start`
 - now download the Expo Client app on your preferred physical device:
