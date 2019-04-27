@@ -1,18 +1,8 @@
 # Multi Screen Starter with Expo
 
-- [install](#install)
-- [development on a physical device](#development-on-a-physical-device)
-- [testing with jest](#testing-with-jest)
-- [linting - prettier and airbnb config](#linting-prettier-and-airbnb-config)
-- [helpful links](#helpful-links)
-- [adding linter](#adding-linter-config-to-another-react-project)
-- [assets](#assets)
-- [device learnings](#device-learnings)
-- [demo & release notes](#demo-and-release-notes)
+**Expo | React Navigation v3 | Jest | ESLint/Prettier**
 
-Expo | React Navigation v3 | Jest | ESLint/Prettier
-
-**Out of the Box**
+### Out of the Box
 
 - React Navigation v3
 - Expo SDK 32 (will always try to keep this on the latest SDK version)
@@ -22,6 +12,18 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
 - SVG icon usage
 - Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
 - Simple Jest testing
+
+## Table of Contents
+
+- [install](#install)
+- [development on a physical device](#development-on-a-physical-device)
+- [testing with jest](#testing-with-jest)
+- [linting](#linting)
+- [helpful links](#helpful-links)
+- [adding linter](#adding-linter-config-to-another-react-project)
+- [assets](#assets)
+- [device learnings](#device-learnings)
+- [demo & release notes](#demo-and-release-notes)
 
 **Current Code Coverage**
 - ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `90.18%` Statements 101/112
@@ -37,14 +39,13 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
 - `[X]` example of svg usage
 - `[X]` example of jest testing
 
-
 ## install
 `yarn` or `yarn install`
 
 ***note:*** *make sure you at least have node ^v10.8.0*
 
-
 ## development on a physical device
+
 - first, your machine and physical device should be on the same wifi connection
 - make sure you have Expo CLI installed globally, if not run:
   - `npm install -g expo-cli`
@@ -59,8 +60,8 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
   - **ios 10 and below:** i wrote about a work around to [get expo running on older iOS devices](https://blog.calebnance.com/expo/getting-expo-to-work-on-older-iphones-with-no-qr-support.html)
 - having issues? check the [installation page](https://docs.expo.io/versions/latest/introduction/installation) for any pitfalls you may have.
 
-
 ## testing with jest
+
 - `yarn test`
   - **"jest --watch --coverage=false --changedSince=origin/master"**
 - `yarn testDebug`
@@ -83,7 +84,8 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
   - `94.34%` Lines 100/106
 
 
-## linting: prettier and airbnb config
+## linting
+
 - make sure you have [prettier package](https://atom.io/packages/prettier-atom) installed on your atom/vscode editor
 - then make sure to enable these options (packages → prettier):
   - eslint integration
@@ -93,11 +95,13 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
 
 
 ## helpful links
+
 - [using nvm](https://davidwalsh.name/nvm)
 - [setup prettier/eslint within project](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a)
 
 
 ## adding linter config to another react project
+
 - yarn:
   - `yarn add eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-import-helpers eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react prettier --dev`
 - npm:
@@ -107,27 +111,24 @@ Expo | React Navigation v3 | Jest | ESLint/Prettier
   - `.prettierignore`
   - `.prettierrc`
 
-
 ## assets
+
 - [black rabbit icon](https://thenounproject.com/search/?q=rabbit&i=1211060) was bought (royalty-free license)
 - SVG Icons from [icomoon](https://icomoon.io)
 
-
 ## device learnings
-- **ios:** The notch on iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max is **30pt** from top
 
+- **ios:** The notch on iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max is **30pt** from top
 
 ## demo and release notes
 
 ### version: 0.0.2 (current)
-**let's get fancy**
 
 - on pre-load finished, enter app animation with [Expo Lottie](https://docs.expo.io/versions/latest/sdk/lottie/)
 - React Navigation v3 ([api](https://reactnavigation.org/docs/en/api-reference.html) | [docs](https://reactnavigation.org/docs/en/getting-started.html))
 
----
-
 ### version: 0.0.1
+
 this starter for a multi screens/stack app is at a good state
 
 - React Navigation v2 ([api](https://reactnavigation.org/docs/en/2.x/api-reference.html) | [docs](https://reactnavigation.org/docs/en/2.x/getting-started.html))
