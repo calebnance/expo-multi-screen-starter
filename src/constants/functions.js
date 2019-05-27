@@ -1,6 +1,9 @@
 import { Asset, Font } from 'expo';
 import { Image } from 'react-native';
 
+import preloadFonts from './preloadFonts';
+import preloadImages from './preloadImages';
+
 // cache fonts
 // /////////////////////////////////////////////////////////////////////////////
 const cacheFonts = fonts => {
@@ -23,4 +26,15 @@ const cacheImages = images => {
   });
 };
 
-export default { cacheFonts, cacheImages };
+// preload async
+// /////////////////////////////////////////////////////////////////////////////
+const loadAssetsAsync = async () => {
+  // preload assets
+  const fontAssets = cacheFonts(preloadFonts);
+  const imageAssets = cacheImages(preloadImages);
+
+  // promise load all
+  return Promise.all([...fontAssets, ...imageAssets]);
+};
+
+export default { cacheFonts, cacheImages, loadAssetsAsync };

@@ -8,8 +8,10 @@ const windowInfo = Dimensions.get('window');
 const { height, width } = windowInfo;
 const aspectRatio = height / width;
 
+// is iPad
+const { isPad } = Platform;
+
 let iPhoneX = false;
-let isTablet = false;
 if (Platform.OS === 'ios') {
   // iphone screen breakdown
   // https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions
@@ -17,15 +19,12 @@ if (Platform.OS === 'ios') {
   if (height === 812 || width === 812 || (height === 896 || width === 896)) {
     iPhoneX = true;
   }
-
-  // is tablet
-  isTablet = Platform.isPad;
 }
 
 export default {
   aspectRatio,
   height,
   iPhoneX,
-  isTablet,
+  isPad,
   width
 };

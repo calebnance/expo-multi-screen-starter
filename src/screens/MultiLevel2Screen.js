@@ -1,14 +1,14 @@
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
-import { utilStyles } from '../api/constants';
+import { gStyle } from '../constants';
 
-// grab component
+// components
 import NavigationBack from '../components/NavigationBack';
 
 const MultiLevel2Screen = () => (
-  <View style={utilStyles.container}>
-    <ScrollView contentContainerStyle={utilStyles.contentContainer}>
-      <Text style={utilStyles.text}>Multi Screens :: Level 2 Content Area</Text>
+  <View style={gStyle.container}>
+    <ScrollView contentContainerStyle={gStyle.contentContainer}>
+      <Text style={gStyle.text}>Multi Screens :: Level 2 Content Area</Text>
     </ScrollView>
   </View>
 );

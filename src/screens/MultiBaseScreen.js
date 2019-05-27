@@ -1,9 +1,9 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, utilStyles } from '../api/constants';
+import { colors, gStyle } from '../constants';
 
-// grab component
+// components
 import Touch from '../components/Touch';
 
 const MultiBaseScreen = ({ navigation }) => (
@@ -12,9 +12,9 @@ const MultiBaseScreen = ({ navigation }) => (
       style={styles.container}
       contentContainerStyle={styles.contentContainer}
     >
-      <Text style={utilStyles.text}>Multi Screens Content Area</Text>
+      <Text style={gStyle.text}>Multi Screens Content Area</Text>
 
-      <View style={utilStyles.spacer80} />
+      <View style={gStyle.spacer80} />
 
       <Touch
         onPress={() => navigation.navigate('MultiLevel2')}
