@@ -1,4 +1,3 @@
-import { StyleSheet } from 'react-native';
 import colors from './colors';
 
 // utility styles
@@ -8,7 +7,7 @@ export default {
     alignItems: 'center',
     backgroundColor: colors.brandPrimary,
     borderColor: colors.brandPrimary,
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 1,
     borderRadius: 4,
     height: 48,
     justifyContent: 'center',
@@ -25,7 +24,7 @@ export default {
   },
   contentContainer: {
     alignItems: 'center',
-    paddingTop: 30
+    paddingTop: 32
   },
   activeO: 0.8,
   activeOFull: 1,

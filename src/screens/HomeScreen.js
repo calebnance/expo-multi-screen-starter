@@ -2,17 +2,17 @@ import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
-import { utilStyles } from '../api/constants';
+import { gStyle } from '../constants';
 
-// grab component
+// components
 import Touch from '../components/Touch';
 
 const HomeScreen = ({ navigation }) => (
-  <SafeAreaView style={utilStyles.container}>
-    <ScrollView contentContainerStyle={utilStyles.contentContainer}>
-      <Text style={utilStyles.text}>Home Content Area</Text>
+  <SafeAreaView style={gStyle.container}>
+    <ScrollView contentContainerStyle={gStyle.contentContainer}>
+      <Text style={gStyle.text}>Home Content Area</Text>
 
-      <View style={utilStyles.spacer80} />
+      <View style={gStyle.spacer80} />
 
       <Touch
         onPress={() => navigation.navigate('MultiBase')}

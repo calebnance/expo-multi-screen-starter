@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
-import { utilStyles } from '../api/constants';
+import { gStyle } from '../constants';
 
 // grab svg icon
 import SvgCircleLeft from './icons/Svg.CircleLeft';
@@ -12,7 +12,7 @@ const NavigationBack = ({ navigation }) => (
     accessibilityLabel="go back"
     accessibilityComponentType="button"
     accessibilityTraits="button"
-    activeOpacity={utilStyles.activeO}
+    activeOpacity={gStyle.activeO}
     onPress={() => navigation.goBack(navigation.state.key)}
     style={{ paddingHorizontal: 16, paddingVertical: 8 }}
   >
