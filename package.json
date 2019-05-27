@@ -56,5 +56,8 @@
     ],
     "verbose": true
   },
-  "private": true
+  "private": true,
+  "prettier": {
+    "singleQuote": true
+  }
 }
