@@ -135,5 +135,5 @@ this starter for a multi screens/stack app is at a good state
 - svg usage
 
 <p align="left">
-  <img src="creative/multi-screens_0.0.2.gif?raw=true" width="320" />
+  <img src="screenshots/multi-screens_0.0.2.gif?raw=true" width="320" />
 </p>
