@@ -4,7 +4,7 @@
     "description": "react native multi screen application starter with expo",
     "slug": "expo-multi-screen-starter",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "33.0.0",
     "version": "0.0.2",
     "platforms": ["android", "ios"],
     "orientation": "portrait",
