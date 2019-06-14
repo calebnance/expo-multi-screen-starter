@@ -4,11 +4,9 @@
 
 ### Out of the Box
 
+- Expo SDK 33
 - React Navigation v3
-- Expo SDK 32 (will always try to keep this on the latest SDK version)
 - Preloading/caching local assets
-  - with splash loading screen
-  - animation with [Lottie](https://docs.expo.io/versions/latest/sdk/lottie/) 🤯
 - SVG icon usage
 - Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
 - Simple Jest testing
@@ -124,7 +122,6 @@
 
 ### version: 0.0.2 (current)
 
-- on pre-load finished, enter app animation with [Expo Lottie](https://docs.expo.io/versions/latest/sdk/lottie/)
 - React Navigation v3 ([api](https://reactnavigation.org/docs/en/api-reference.html) | [docs](https://reactnavigation.org/docs/en/getting-started.html))
 
 ### version: 0.0.1
