@@ -5,9 +5,9 @@
     "scheme": "expomultiscreenstarter",
     "slug": "expomultiscreenstarter",
     "privacy": "public",
-    "sdkVersion": "33.0.0",
+    "sdkVersion": "34.0.0",
     "version": "0.0.2",
-    "platforms": ["android", "ios"],
+    "platforms": ["android", "ios", "web"],
     "githubUrl": "https://github.com/calebnance/expo-multi-screen-starter",
     "orientation": "portrait",
     "primaryColor": "#1d2d3a",
@@ -16,6 +16,9 @@
       "backgroundColor": "#1d2d3a",
       "image": "src/assets/splash.png",
       "resizeMode": "cover"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["src/assets/**/*"],
     "android": {
