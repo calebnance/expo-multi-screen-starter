@@ -1,12 +1,19 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
+import { Text, TouchableOpacity } from 'react-native';
 import { gStyle } from '../constants';
 
-const Touch = ({ accessible, activeO, onPress, style, text, textStyle }) => (
+const Touch = ({
+  accessible,
+  activeOpacity,
+  onPress,
+  style,
+  text,
+  textStyle
+}) => (
   <TouchableOpacity
     accessible={accessible}
-    activeOpacity={activeO}
+    activeOpacity={activeOpacity}
     onPress={onPress}
     style={style}
   >
@@ -16,7 +23,7 @@ const Touch = ({ accessible, activeO, onPress, style, text, textStyle }) => (
 
 Touch.defaultProps = {
   accessible: true,
-  activeO: gStyle.activeO,
+  activeOpacity: gStyle.activeOpacity,
   style: gStyle.btn,
   text: '',
   textStyle: gStyle.btnText
@@ -28,7 +35,7 @@ Touch.propTypes = {
 
   // optional
   accessible: PropTypes.bool,
-  activeO: PropTypes.number,
+  activeOpacity: PropTypes.number,
   style: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.number,

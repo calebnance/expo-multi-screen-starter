@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StatusBar, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import { AppLoading, ScreenOrientation } from 'expo';
 import { device, func, gStyle } from './src/constants';
 
@@ -36,9 +36,7 @@ class App extends React.Component {
 
     return (
       <View style={gStyle.container}>
-        <StatusBar
-          barStyle={Platform.OS === 'ios' ? 'dark-content' : 'light-content'}
-        />
+        <StatusBar barStyle={device.iOS ? 'dark-content' : 'light-content'} />
 
         <AppSwitchNav />
       </View>

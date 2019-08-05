@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
-import PropTypes from 'prop-types';
 import { gStyle } from '../constants';
 
 // components

@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { colors, gStyle } from '../constants';
 
 // components

@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   createStackNavigator,
   createBottomTabNavigator
 } from 'react-navigation';
-import PropTypes from 'prop-types';
 import { colors } from '../constants';
 
 // grab screens

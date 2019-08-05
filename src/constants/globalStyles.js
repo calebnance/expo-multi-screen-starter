@@ -3,6 +3,11 @@ import colors from './colors';
 // utility styles
 // /////////////////////////////////////////////////////////////////////////////
 export default {
+  activeOpacity: 0.7,
+  container: {
+    backgroundColor: colors.white,
+    flex: 1
+  },
   btn: {
     alignItems: 'center',
     backgroundColor: colors.brandPrimary,
@@ -18,16 +23,10 @@ export default {
     color: colors.white,
     textAlign: 'center'
   },
-  container: {
-    backgroundColor: colors.white,
-    flex: 1
-  },
   contentContainer: {
     alignItems: 'center',
     paddingTop: 32
   },
-  activeO: 0.8,
-  activeOFull: 1,
   spacer80: {
     height: 80,
     width: '100%'
