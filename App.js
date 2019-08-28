@@ -44,7 +44,7 @@ class App extends React.Component {
     }
 
     return (
-      <View style={gStyle.container}>
+      <React.Fragment>
         <StatusBar barStyle={device.iOS ? 'dark-content' : 'light-content'} />
 
         <TabNavigator
@@ -53,7 +53,7 @@ class App extends React.Component {
           }}
           theme={theme}
         />
-      </View>
+      </React.Fragment>
     );
   }
 }

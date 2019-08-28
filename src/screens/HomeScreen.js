@@ -1,35 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
+import { SafeAreaView, useTheme } from 'react-navigation';
 import { gStyle } from '../constants';
 
 // components
 import Touch from '../components/Touch';
 
-const HomeScreen = ({ navigation, screenProps }) => (
-  <SafeAreaView style={gStyle.container}>
-    <ScrollView contentContainerStyle={gStyle.contentContainer}>
-      <Text style={gStyle.text}>Home Content Area</Text>
+const HomeScreen = ({ navigation, screenProps }) => {
+  const theme = useTheme();
 
-      <View style={gStyle.spacer80} />
+  return (
+    <SafeAreaView style={gStyle.container[theme]}>
+      <ScrollView contentContainerStyle={gStyle.contentContainer}>
+        <Text style={gStyle.text[theme]}>Home content area</Text>
 
-      <Touch
-        onPress={() => navigation.navigate('MultiBase')}
-        text="jump to Multi tab"
-      />
+        <View style={gStyle.spacer64} />
 
-      <Touch
-        onPress={() => screenProps.updateTheme('light')}
-        text="light theme"
-      />
-      <Touch
-        onPress={() => screenProps.updateTheme('dark')}
-        text="dark theme"
-      />
-    </ScrollView>
-  </SafeAreaView>
-);
+        <Touch
+          onPress={() => navigation.navigate('MultiBase')}
+          text="Jump to Multi tab"
+        />
+
+        <Touch
+          onPress={() => screenProps.updateTheme('light')}
+          text="Light theme"
+        />
+        <Touch
+          onPress={() => screenProps.updateTheme('dark')}
+          text="Dark theme"
+        />
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
 
 HomeScreen.navigationOptions = {
   header: null

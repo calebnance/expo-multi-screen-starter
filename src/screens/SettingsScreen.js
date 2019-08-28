@@ -1,42 +1,50 @@
 import React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
-import { fonts, gStyle, images } from '../constants';
+import { useTheme } from 'react-navigation';
+import { gStyle, images } from '../constants';
 
 const headerImage = __DEV__ ? 'rabbitDev' : 'rabbitProd';
 
-const headerTitle = (
-  <View style={{ flex: 1 }}>
-    <Image
-      style={{ alignSelf: 'center', height: 40, width: 40 }}
-      source={images[headerImage]}
-    />
-  </View>
-);
+const SettingsScreen = () => {
+  const theme = useTheme();
 
-const SettingsScreen = () => (
-  <View style={gStyle.container}>
-    <ScrollView contentContainerStyle={gStyle.contentContainer}>
-      <Text style={gStyle.text}>Settings Content Area</Text>
-      <Text style={{ fontFamily: fonts.pacifico, fontSize: 20, marginTop: 16 }}>
-        Pacifico Font Example
+  return (
+    <ScrollView
+      contentContainerStyle={gStyle.contentContainer}
+      style={gStyle.container[theme]}
+    >
+      <Text style={gStyle.text[theme]}>Settings content area</Text>
+
+      <View style={gStyle.spacer16} />
+
+      <Text style={[gStyle.text[theme], gStyle.textPacifico]}>
+        Pacifico font example
       </Text>
     </ScrollView>
-  </View>
-);
+  );
+};
 
-SettingsScreen.navigationOptions = {
-  headerLeft: (
-    <View style={{ flex: 1, paddingLeft: 8 }}>
-      <Text>left</Text>
-    </View>
-  ),
-  headerRight: (
-    <View style={{ flex: 1, paddingRight: 8 }}>
-      <Text>right</Text>
-    </View>
-  ),
-  // title: 'Settings'
-  headerTitle
+SettingsScreen.navigationOptions = ({ theme }) => {
+  return {
+    headerLeft: (
+      <View style={{ flex: 1, paddingLeft: 8 }}>
+        <Text style={gStyle.text[theme]}>left</Text>
+      </View>
+    ),
+    headerRight: (
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={gStyle.text[theme]}>right</Text>
+      </View>
+    ),
+    headerTitle: (
+      <View style={{ flex: 1 }}>
+        <Image
+          style={{ alignSelf: 'center', height: 40, width: 40 }}
+          source={images[headerImage]}
+        />
+      </View>
+    )
+  };
 };
 
 /*

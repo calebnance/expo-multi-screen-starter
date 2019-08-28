@@ -102,7 +102,7 @@ const TabNavigator = createBottomTabNavigator(
     initialRouteName: 'HomeStack',
     tabBarOptions: {
       activeTintColor: {
-        light: colors.brandPrimary,
+        light: colors.darkColor,
         dark: colors.grey
       },
       inactiveTintColor: {

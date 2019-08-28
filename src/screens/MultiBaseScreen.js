@@ -1,28 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useTheme } from 'react-navigation';
 import { colors, gStyle } from '../constants';
 
 // components
 import Touch from '../components/Touch';
 
-const MultiBaseScreen = ({ navigation }) => (
-  <View style={styles.container}>
-    <ScrollView
-      style={styles.container}
-      contentContainerStyle={styles.contentContainer}
-    >
-      <Text style={gStyle.text}>Multi Screens Content Area</Text>
+const MultiBaseScreen = ({ navigation }) => {
+  const theme = useTheme();
 
-      <View style={gStyle.spacer80} />
+  return (
+    <ScrollView
+      contentContainerStyle={styles.contentContainer}
+      style={gStyle.container[theme]}
+    >
+      <Text style={gStyle.text[theme]}>Multi screen content area</Text>
+
+      <View style={gStyle.spacer64} />
 
       <Touch
         onPress={() => navigation.navigate('MultiLevel2')}
-        text="go to level 2"
+        text="Go to level 2"
       />
     </ScrollView>
-  </View>
-);
+  );
+};
 
 MultiBaseScreen.navigationOptions = {
   headerTitleStyle: {

@@ -1,17 +1,36 @@
 import colors from './colors';
+import fonts from './fonts';
 
 // utility styles
 // /////////////////////////////////////////////////////////////////////////////
 export default {
   activeOpacity: 0.7,
   container: {
-    backgroundColor: colors.white,
-    flex: 1
+    dark: {
+      backgroundColor: colors.darkHighlightColor,
+      flex: 1
+    },
+    light: {
+      backgroundColor: colors.white,
+      flex: 1
+    }
+  },
+  text: {
+    dark: {
+      color: colors.white
+    },
+    light: {
+      color: colors.darkColor
+    }
+  },
+  textPacifico: {
+    fontFamily: fonts.pacifico,
+    fontSize: 20
   },
   btn: {
     alignItems: 'center',
-    backgroundColor: colors.brandPrimary,
-    borderColor: colors.brandPrimary,
+    backgroundColor: colors.darkColor,
+    borderColor: colors.darkColor,
     borderWidth: 1,
     borderRadius: 4,
     height: 48,
@@ -28,11 +47,12 @@ export default {
     alignItems: 'center',
     paddingTop: 32
   },
-  spacer80: {
-    height: 80,
+  spacer16: {
+    height: 16,
     width: '100%'
   },
-  text: {
-    color: colors.brandPrimary
+  spacer64: {
+    height: 64,
+    width: '100%'
   }
 };
