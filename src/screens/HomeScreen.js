@@ -7,7 +7,7 @@ import { gStyle } from '../constants';
 // components
 import Touch from '../components/Touch';
 
-const HomeScreen = ({ navigation }) => (
+const HomeScreen = ({ navigation, screenProps }) => (
   <SafeAreaView style={gStyle.container}>
     <ScrollView contentContainerStyle={gStyle.contentContainer}>
       <Text style={gStyle.text}>Home Content Area</Text>
@@ -17,6 +17,15 @@ const HomeScreen = ({ navigation }) => (
       <Touch
         onPress={() => navigation.navigate('MultiBase')}
         text="jump to Multi tab"
+      />
+
+      <Touch
+        onPress={() => screenProps.updateTheme('light')}
+        text="light theme"
+      />
+      <Touch
+        onPress={() => screenProps.updateTheme('dark')}
+        text="dark theme"
       />
     </ScrollView>
   </SafeAreaView>
@@ -28,7 +37,8 @@ HomeScreen.navigationOptions = {
 
 HomeScreen.propTypes = {
   // required
-  navigation: PropTypes.object.isRequired
+  navigation: PropTypes.object.isRequired,
+  screenProps: PropTypes.object.isRequired
 };
 
 export default HomeScreen;

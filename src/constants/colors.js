@@ -14,5 +14,14 @@ export default {
   blue: '#0197f6',
   brown: '#bcab79',
   grey: '#d0ccd0',
-  red: '#d7263d'
+  red: '#d7263d',
+
+  activeTintColor: {
+    light: '#1d2d3a',
+    dark: '#d0ccd0'
+  },
+  inactiveTintColor: {
+    light: '#d0ccd0',
+    dark: 'rgba(255, 255, 255, 0.2)'
+  }
 };
