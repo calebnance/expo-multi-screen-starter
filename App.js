@@ -1,7 +1,7 @@
 import React from 'react';
-import { StatusBar, View } from 'react-native';
+import { StatusBar } from 'react-native';
 import { AppLoading, ScreenOrientation } from 'expo';
-import { device, func, gStyle } from './src/constants';
+import { device, func } from './src/constants';
 
 // tab navigator
 import TabNavigator from './src/navigation/TabNavigator';
