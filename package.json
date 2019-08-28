@@ -17,11 +17,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject",
-    "test": "jest --watch --coverage=false --changedSince=origin/master",
-    "testDebug": "jest -o --watch --coverage=false",
-    "testFinal": "jest",
-    "updateSnapshots": "jest -u --coverage=false"
+    "eject": "expo eject"
   },
   "dependencies": {
     "expo": "^34.0.3",
@@ -49,29 +45,13 @@
     "eslint-plugin-jsx-a11y": "^6.2.2",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
-    "jest-expo": "^32.0.0",
-    "prettier": "^1.18.2",
-    "react-test-renderer": "^16.8.6"
-  },
-  "jest": {
-    "preset": "jest-expo",
-    "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|sentry-expo|native-base))"
-    ],
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/coverage/**",
-      "!**/node_modules/**",
-      "!**/babel.config.js"
-    ],
-    "verbose": true
+    "prettier": "^1.18.2"
   },
   "private": true,
   "prettier": {
     "singleQuote": true
   },
   "engines": {
-    "node": ">=10.3.0"
+    "node": ">=10.8.0"
   }
 }
