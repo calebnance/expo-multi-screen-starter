@@ -40,7 +40,7 @@ SettingsScreen.navigationOptions = {
 };
 
 /*
-// shoutout brent: https://snack.expo.io/H105kxsG7
+// shoutout @notbrent: https://snack.expo.io/H105kxsG7
 const shouldShowBackButton = stackRouteNavigation => {
   const parent = stackRouteNavigation.dangerouslyGetParent();
   return parent.state.routes.indexOf(stackRouteNavigation.state) > 0;

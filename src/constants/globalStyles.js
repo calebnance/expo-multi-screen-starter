@@ -16,6 +16,7 @@ export default {
     borderRadius: 4,
     height: 48,
     justifyContent: 'center',
+    marginBottom: 16,
     paddingHorizontal: 24,
     paddingVertical: 8
   },
