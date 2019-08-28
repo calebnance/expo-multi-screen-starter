@@ -1,41 +1,27 @@
 # Multi Screen Starter with Expo
 
-**Expo | React Navigation v3 | Jest | ESLint/Prettier**
+<p align="center">
+  <img src="screenshots/screenshare-6.png?raw=true" />
+</p>
 
 ### Out of the Box
 
-- Expo SDK 33
-- React Navigation v3
+- Expo SDK 34
+- React Navigation v3 & Theme Support!
 - Preloading/caching local assets
-- SVG icon usage
+- SVG custom icon usage
 - Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
-- Simple Jest testing
 
 ## Table of Contents
 
 - [install](#install)
 - [development on a physical device](#development-on-a-physical-device)
-- [testing with jest](#testing-with-jest)
 - [linting](#linting)
 - [helpful links](#helpful-links)
 - [adding linter](#adding-linter-config-to-another-react-project)
 - [assets](#assets)
 - [device learnings](#device-learnings)
 - [demo & release notes](#demo-and-release-notes)
-
-**Current Code Coverage**
-- ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `90.18%` Statements 101/112
-- ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `67.74%` Branches 21/31
-- ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `72.41%` Functions 21/29
-- ![#4d9221](https://placehold.it/15/4d9221/000000?text=+) `94.34%` Lines 100/106
-
-**Road Map**
-- `[ ]` dynamic screen transition types (standard & modal)
-- `[X]` example of enter app animation
-- `[X]` example of on pre-load finished, enter app animation
-- `[X]` example of react navigation
-- `[X]` example of svg usage
-- `[X]` example of jest testing
 
 ## install
 `yarn` or `yarn install`
@@ -57,30 +43,6 @@
   - **ios 11 and later:** you can open your camera app to scan the QR code, apple made the Expo peeps remove the QR scanner from the app for some reason... 🤔
   - **ios 10 and below:** i wrote about a work around to [get expo running on older iOS devices](https://blog.calebnance.com/expo/getting-expo-to-work-on-older-iphones-with-no-qr-support.html)
 - having issues? check the [installation page](https://docs.expo.io/versions/latest/introduction/installation) for any pitfalls you may have.
-
-## testing with jest
-
-- `yarn test`
-  - **"jest --watch --coverage=false --changedSince=origin/master"**
-- `yarn testDebug`
-  - **"jest -o --watch --coverage=false"**
-- `yarn testFinal`
-  - **"jest"**
-  - this will generate
-    - a report within the console
-    - a html code coverage report within `/coverage/`
-- `yarn updateSnapshots`
-  - **"jest -u --coverage=false"**
-
-***helpful notes:*** for animation and delays, make sure you add: `jest.useFakeTimers();`
-
-**code coverage history**
-- 10/24/2018
-  - `90.18%` Statements 101/112
-  - `67.74%` Branches 21/31
-  - `72.41%` Functions 21/29
-  - `94.34%` Lines 100/106
-
 
 ## linting
 
@@ -122,6 +84,8 @@
 
 ### version: 0.0.2 (current)
 
+- upgraded to [Expo SDK 34](https://blog.expo.io/expo-sdk-34-is-now-available-4f7825239319)
+- React Navigation Theme Support / Example Usage ([themes docs](https://reactnavigation.org/docs/en/themes.html))
 - React Navigation v3 ([api](https://reactnavigation.org/docs/en/api-reference.html) | [docs](https://reactnavigation.org/docs/en/getting-started.html))
 
 ### version: 0.0.1
