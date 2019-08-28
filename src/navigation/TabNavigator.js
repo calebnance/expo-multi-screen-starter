@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  createStackNavigator,
-  createBottomTabNavigator
+  createAppContainer,
+  createBottomTabNavigator,
+  createStackNavigator
 } from 'react-navigation';
 import { colors } from '../constants';
 
@@ -25,7 +26,9 @@ const HomeStack = createStackNavigator({
   Home: HomeScreen
 });
 
-const HomeTabBarIcon = ({ focused }) => <SvgHome active={focused} />;
+const HomeTabBarIcon = ({ focused }) => {
+  return <SvgHome active={focused} />;
+};
 HomeTabBarIcon.propTypes = {
   // required
   focused: PropTypes.bool.isRequired
@@ -88,7 +91,7 @@ StatsStack.navigationOptions = {
   tabBarIcon: StatsTabBarIcon
 };
 
-export default createBottomTabNavigator(
+const TabNavigator = createBottomTabNavigator(
   {
     HomeStack,
     MultiStack,
@@ -98,8 +101,18 @@ export default createBottomTabNavigator(
   {
     initialRouteName: 'HomeStack',
     tabBarOptions: {
-      activeTintColor: colors.brandPrimary,
-      inactiveTintColor: colors.grey
+      activeTintColor: {
+        light: colors.brandPrimary,
+        dark: colors.grey
+      },
+      inactiveTintColor: {
+        light: colors.grey,
+        dark: colors.white20
+      }
     }
   }
 );
+
+const App = createAppContainer(TabNavigator);
+
+export default App;
