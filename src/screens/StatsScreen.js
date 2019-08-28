@@ -1,20 +1,23 @@
 import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text } from 'react-native';
+import { useTheme } from 'react-navigation';
 import { gStyle } from '../constants';
 
-const StatsScreen = () => (
-  <View style={gStyle.container}>
-    <ScrollView contentContainerStyle={gStyle.contentContainer}>
-      <Text style={gStyle.text}>Stats Content Area</Text>
+const StatsScreen = () => {
+  const theme = useTheme();
+
+  return (
+    <ScrollView
+      contentContainerStyle={gStyle.contentContainer}
+      style={gStyle.container[theme]}
+    >
+      <Text style={gStyle.text[theme]}>Stats content area</Text>
     </ScrollView>
-  </View>
-);
+  );
+};
 
 StatsScreen.navigationOptions = {
-  headerTitleStyle: {
-    flex: 1,
-    textAlign: 'center'
-  },
+  headerTitleStyle: gStyle.headerTitleStyle,
   title: 'Stats'
 };
 

@@ -1,29 +1,38 @@
 import React from 'react';
-import { StatusBar, View } from 'react-native';
+import { StatusBar } from 'react-native';
 import { AppLoading, ScreenOrientation } from 'expo';
-import { device, func, gStyle } from './src/constants';
+import { device, func } from './src/constants';
 
-// navigation switch
-import AppSwitchNav from './src/navigation/AppSwitchNav';
+// tab navigator
+import TabNavigator from './src/navigation/TabNavigator';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isLoading: true
+      isLoading: true,
+      theme: 'light'
     };
 
-    // iPad? (TODO in future android tablet checked)
+    // is tablet?
     if (device.isTablet) {
       ScreenOrientation.allowAsync(
         ScreenOrientation.Orientation.ALL_BUT_UPSIDE_DOWN
       );
     }
+
+    this.updateTheme = this.updateTheme.bind(this);
+  }
+
+  updateTheme(themeType) {
+    this.setState({
+      theme: themeType
+    });
   }
 
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, theme } = this.state;
 
     if (isLoading) {
       return (
@@ -35,11 +44,16 @@ class App extends React.Component {
     }
 
     return (
-      <View style={gStyle.container}>
+      <React.Fragment>
         <StatusBar barStyle={device.iOS ? 'dark-content' : 'light-content'} />
 
-        <AppSwitchNav />
-      </View>
+        <TabNavigator
+          screenProps={{
+            updateTheme: this.updateTheme
+          }}
+          theme={theme}
+        />
+      </React.Fragment>
     );
   }
 }
