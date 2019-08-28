@@ -28,14 +28,8 @@ const MultiBaseScreen = ({ navigation }) => {
 };
 
 MultiBaseScreen.navigationOptions = {
-  headerTitleStyle: {
-    flex: 1,
-    textAlign: 'center'
-  },
-  headerStyle: {
-    borderBottomColor: 'transparent',
-    elevation: 0
-  },
+  headerStyle: gStyle.headerStyle,
+  headerTitleStyle: gStyle.headerTitleStyle,
   title: 'Multi Screens'
 };
 

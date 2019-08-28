@@ -22,10 +22,7 @@ const MultiLevel2Screen = () => {
 MultiLevel2Screen.navigationOptions = ({ navigation }) => ({
   headerLeft: <NavigationBack navigation={navigation} />,
   headerRight: <View style={{ flex: 1 }} />,
-  headerTitleStyle: {
-    flex: 1,
-    textAlign: 'center'
-  },
+  headerTitleStyle: gStyle.headerTitleStyle,
   title: 'Level 2'
 });
 

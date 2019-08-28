@@ -5,6 +5,9 @@ import fonts from './fonts';
 // /////////////////////////////////////////////////////////////////////////////
 export default {
   activeOpacity: 0.7,
+
+  // containers
+  // ///////////////////////////////////////////////////////////////////////////
   container: {
     dark: {
       backgroundColor: colors.darkHighlightColor,
@@ -15,18 +18,24 @@ export default {
       flex: 1
     }
   },
-  text: {
-    dark: {
-      color: colors.white
-    },
-    light: {
-      color: colors.darkColor
-    }
+  contentContainer: {
+    alignItems: 'center',
+    paddingTop: 32
   },
-  textPacifico: {
-    fontFamily: fonts.pacifico,
-    fontSize: 20
+
+  // navigation styles
+  // ///////////////////////////////////////////////////////////////////////////
+  headerStyle: {
+    borderBottomColor: 'transparent',
+    elevation: 0
   },
+  headerTitleStyle: {
+    flex: 1,
+    textAlign: 'center'
+  },
+
+  // button
+  // ///////////////////////////////////////////////////////////////////////////
   btn: {
     alignItems: 'center',
     backgroundColor: colors.darkColor,
@@ -43,10 +52,24 @@ export default {
     color: colors.white,
     textAlign: 'center'
   },
-  contentContainer: {
-    alignItems: 'center',
-    paddingTop: 32
+
+  // text
+  // ///////////////////////////////////////////////////////////////////////////
+  text: {
+    dark: {
+      color: colors.white
+    },
+    light: {
+      color: colors.darkColor
+    }
   },
+  textPacifico: {
+    fontFamily: fonts.pacifico,
+    fontSize: 20
+  },
+
+  // spacers
+  // ///////////////////////////////////////////////////////////////////////////
   spacer16: {
     height: 16,
     width: '100%'

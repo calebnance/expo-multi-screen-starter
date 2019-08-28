@@ -17,10 +17,7 @@ const StatsScreen = () => {
 };
 
 StatsScreen.navigationOptions = {
-  headerTitleStyle: {
-    flex: 1,
-    textAlign: 'center'
-  },
+  headerTitleStyle: gStyle.headerTitleStyle,
   title: 'Stats'
 };
 
