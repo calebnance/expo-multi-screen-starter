@@ -33,6 +33,7 @@ class App extends React.Component {
 
   render() {
     const { isLoading, theme } = this.state;
+    const iOSStatusType = theme === 'light' ? 'dark-content' : 'light-content';
 
     if (isLoading) {
       return (
@@ -45,7 +46,7 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <StatusBar barStyle={device.iOS ? 'dark-content' : 'light-content'} />
+        <StatusBar barStyle={device.iOS ? iOSStatusType : 'light-content'} />
 
         <TabNavigator
           screenProps={{

@@ -25,10 +25,6 @@ export default {
 
   // navigation styles
   // ///////////////////////////////////////////////////////////////////////////
-  headerStyle: {
-    borderBottomColor: 'transparent',
-    elevation: 0
-  },
   headerTitleStyle: {
     flex: 1,
     textAlign: 'center'

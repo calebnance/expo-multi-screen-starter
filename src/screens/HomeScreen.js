@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, Text, View } from 'react-native';
-import { SafeAreaView, useTheme } from 'react-navigation';
+import { useTheme } from 'react-navigation';
 import { gStyle } from '../constants';
 
 // components
@@ -11,7 +11,7 @@ const HomeScreen = ({ navigation, screenProps }) => {
   const theme = useTheme();
 
   return (
-    <SafeAreaView style={gStyle.container[theme]}>
+    <View style={gStyle.container[theme]}>
       <ScrollView contentContainerStyle={gStyle.contentContainer}>
         <Text style={gStyle.text[theme]}>Home content area</Text>
 
@@ -31,12 +31,13 @@ const HomeScreen = ({ navigation, screenProps }) => {
           text="Dark theme"
         />
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
 HomeScreen.navigationOptions = {
-  header: null
+  headerTitleStyle: gStyle.headerTitleStyle,
+  title: 'Home'
 };
 
 HomeScreen.propTypes = {
