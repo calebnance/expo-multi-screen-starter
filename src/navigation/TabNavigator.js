@@ -1,4 +1,5 @@
-import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { colors } from '../constants';
 
 // navigation stacks

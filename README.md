@@ -7,7 +7,7 @@
 ### Out of the Box
 
 - Expo SDK 34
-- React Navigation v3 & Theme Support!
+- React Navigation v4 & Theme Support!
 - Preloading/caching local assets
 - SVG custom icon usage
 - Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
@@ -25,8 +25,6 @@
 
 ## install
 `yarn` or `yarn install`
-
-***note:*** *make sure you at least have node ^v10.8.0*
 
 ## development on a physical device
 
@@ -84,9 +82,10 @@
 
 ### version: 0.0.2 (current)
 
+- upgraded to React Navigation v4 ([api](https://reactnavigation.org/docs/en/api-reference.html) | [docs](https://reactnavigation.org/docs/en/getting-started.html))
 - upgraded to [Expo SDK 34](https://blog.expo.io/expo-sdk-34-is-now-available-4f7825239319)
 - React Navigation Theme Support / Example Usage ([themes docs](https://reactnavigation.org/docs/en/themes.html))
-- React Navigation v3 ([api](https://reactnavigation.org/docs/en/api-reference.html) | [docs](https://reactnavigation.org/docs/en/getting-started.html))
+- upgraded to React Navigation v3 ([api](https://reactnavigation.org/docs/en/3.x/api-reference.html) | [docs](https://reactnavigation.org/docs/en/3.x/getting-started.html))
 
 ### version: 0.0.1
 
