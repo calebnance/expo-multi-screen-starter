@@ -1,7 +1,7 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import { AppLoading, ScreenOrientation } from 'expo';
-import { device, func } from './src/constants';
+import { device, func, gStyle } from './src/constants';
 
 // tab navigator
 import TabNavigator from './src/navigation/TabNavigator';
@@ -45,7 +45,7 @@ class App extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <View style={gStyle.container[theme]}>
         <StatusBar barStyle={device.iOS ? iOSStatusType : 'light-content'} />
 
         <TabNavigator
@@ -54,7 +54,7 @@ class App extends React.Component {
           }}
           theme={theme}
         />
-      </React.Fragment>
+      </View>
     );
   }
 }
