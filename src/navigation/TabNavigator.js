@@ -5,15 +5,15 @@ import { colors } from '../constants';
 // navigation stacks
 import HomeStack from './HomeStack';
 import MultiStack from './MultiStack';
-import SettingsStack from './SettingsStack';
 import StatsStack from './StatsStack';
+import SettingsStack from './SettingsStack';
 
 const TabNavigator = createBottomTabNavigator(
   {
     HomeStack,
     MultiStack,
-    SettingsStack,
-    StatsStack
+    StatsStack,
+    SettingsStack
   },
   {
     initialRouteName: 'HomeStack',

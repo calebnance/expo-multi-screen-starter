@@ -10,10 +10,10 @@
     "platforms": ["android", "ios", "web"],
     "githubUrl": "https://github.com/calebnance/expo-multi-screen-starter",
     "orientation": "portrait",
-    "primaryColor": "#1d2d3a",
+    "primaryColor": "#2a2a2a",
     "icon": "src/assets/icon.png",
     "splash": {
-      "backgroundColor": "#1d2d3a",
+      "backgroundColor": "#2a2a2a",
       "image": "src/assets/splash.png",
       "resizeMode": "cover"
     },
