@@ -6,8 +6,8 @@ const grey = '#d0ccd0';
 const white20 = 'rgba(255, 255, 255, 0.2)';
 
 export default {
-  black: '#000',
-  white: '#fff',
+  black: '#000000',
+  white: '#ffffff',
   white20,
 
   darkColor,
