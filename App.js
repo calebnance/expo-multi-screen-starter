@@ -1,6 +1,7 @@
 import React from 'react';
 import { StatusBar, View } from 'react-native';
 import { AppLoading, ScreenOrientation } from 'expo';
+import { Appearance } from 'react-native-appearance';
 import { device, func, gStyle } from './src/constants';
 
 // tab navigator
@@ -15,14 +16,26 @@ class App extends React.Component {
       theme: 'light'
     };
 
-    // is tablet?
-    if (device.isTablet) {
+    // is iPad?
+    if (device.isPad) {
       ScreenOrientation.allowAsync(
         ScreenOrientation.Orientation.ALL_BUT_UPSIDE_DOWN
       );
     }
 
     this.updateTheme = this.updateTheme.bind(this);
+  }
+
+  componentDidMount() {
+    // get system preference
+    const colorScheme = Appearance.getColorScheme();
+
+    // if light or dark
+    if (colorScheme !== 'no-preference') {
+      this.setState({
+        theme: colorScheme
+      });
+    }
   }
 
   updateTheme(themeType) {

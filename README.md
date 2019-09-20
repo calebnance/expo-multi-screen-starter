@@ -8,6 +8,7 @@
 
 - Expo SDK 35
 - React Navigation v4 & Theme Support!
+- iOS 13 Appearance Support (with [react-native-appearance](https://github.com/expo/react-native-appearance))
 - Preloading/caching local assets
 - SVG custom icon usage
 - Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
