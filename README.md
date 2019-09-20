@@ -6,7 +6,7 @@
 
 ### Out of the Box
 
-- Expo SDK 34
+- Expo SDK 35
 - React Navigation v4 & Theme Support!
 - Preloading/caching local assets
 - SVG custom icon usage
@@ -82,6 +82,7 @@
 
 ### version: 0.0.2 (current)
 
+- upgraded to [Expo SDK 35](https://blog.expo.io/expo-sdk-35-is-now-available-beee0dfafbf4)
 - upgraded to React Navigation v4 ([api](https://reactnavigation.org/docs/en/api-reference.html) | [docs](https://reactnavigation.org/docs/en/getting-started.html))
 - upgraded to [Expo SDK 34](https://blog.expo.io/expo-sdk-34-is-now-available-4f7825239319)
 - React Navigation Theme Support / Example Usage ([themes docs](https://reactnavigation.org/docs/en/themes.html))
