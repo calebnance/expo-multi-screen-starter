@@ -5,7 +5,6 @@
     "scheme": "expomultiscreenstarter",
     "slug": "expomultiscreenstarter",
     "privacy": "public",
-    "sdkVersion": "36.0.0",
     "version": "0.0.2",
     "platforms": ["android", "ios", "web"],
     "githubUrl": "https://github.com/calebnance/expo-multi-screen-starter",
