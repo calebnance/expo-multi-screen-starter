@@ -10,7 +10,7 @@
 
 ### Out of the Box
 
-- Expo SDK 36
+- Expo SDK 38
 - React Navigation v4 & Theme Support!
 - iOS 13 Appearance Support (with [react-native-appearance](https://github.com/expo/react-native-appearance))
 - Preloading/caching local assets
@@ -96,6 +96,8 @@ Run Project Locally: `expo start` or `yarn dev`
 
 ### version: 0.0.2 (current)
 
+- upgraded to [Expo SDK 38](https://blog.expo.io/expo-sdk-38-is-now-available-ab6cd30ca2ee)
+- upgraded to [Expo SDK 37](https://blog.expo.io/expo-sdk-37-is-now-available-dd5770f066a6)
 - upgraded to [Expo SDK 36](https://blog.expo.io/expo-sdk-36-is-now-available-b91897b437fe)
 - upgraded to [Expo SDK 35](https://blog.expo.io/expo-sdk-35-is-now-available-beee0dfafbf4)
 - upgraded to React Navigation v4 ([api](https://reactnavigation.org/docs/en/api-reference.html) | [docs](https://reactnavigation.org/docs/en/getting-started.html))

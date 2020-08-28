@@ -26,17 +26,17 @@ const SettingsScreen = () => {
 
 SettingsScreen.navigationOptions = ({ theme }) => {
   return {
-    headerLeft: (
+    headerLeft: () => (
       <View style={{ flex: 1, paddingLeft: 16 }}>
         <Text style={gStyle.text[theme]}>left</Text>
       </View>
     ),
-    headerRight: (
+    headerRight: () => (
       <View style={{ flex: 1, paddingRight: 16 }}>
         <Text style={gStyle.text[theme]}>right</Text>
       </View>
     ),
-    headerTitle: (
+    headerTitle: () => (
       <View style={{ flex: 1 }}>
         <Image
           style={{ alignSelf: 'center', height: 40, width: 40 }}
