@@ -1,4 +1,3 @@
-import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { colors } from '../constants';
 
@@ -8,7 +7,7 @@ import MultiStack from './MultiStack';
 import StatsStack from './StatsStack';
 import SettingsStack from './SettingsStack';
 
-const TabNavigator = createBottomTabNavigator(
+export default createBottomTabNavigator(
   {
     HomeStack,
     MultiStack,
@@ -29,7 +28,3 @@ const TabNavigator = createBottomTabNavigator(
     }
   }
 );
-
-const App = createAppContainer(TabNavigator);
-
-export default App;

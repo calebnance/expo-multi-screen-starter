@@ -5,7 +5,7 @@ import { Appearance } from 'react-native-appearance';
 import { device, func, gStyle } from './src/constants';
 
 // tab navigator
-import TabNavigator from './src/navigation/TabNavigator';
+import Stack from './src/navigation/Stack';
 
 class App extends React.Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class App extends React.Component {
       <View style={gStyle.container[theme]}>
         <StatusBar barStyle={device.iOS ? iOSStatusType : 'light-content'} />
 
-        <TabNavigator
+        <Stack
           screenProps={{
             updateTheme: this.updateTheme
           }}
