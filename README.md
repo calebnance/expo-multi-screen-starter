@@ -10,7 +10,7 @@
 
 ### Out of the Box
 
-- Expo SDK 38
+- Expo SDK 39
 - React Navigation v4 & Theme Support!
 - iOS 13 Appearance Support (with [react-native-appearance](https://github.com/expo/react-native-appearance))
 - Preloading/caching local assets
@@ -96,20 +96,21 @@ Run Project Locally: `expo start` or `yarn dev`
 
 ### version: 0.0.2 (current)
 
+- upgraded to [Expo SDK 39](https://blog.expo.io/expo-sdk-39-is-now-available-4c10aa825e3f)
 - upgraded to [Expo SDK 38](https://blog.expo.io/expo-sdk-38-is-now-available-ab6cd30ca2ee)
 - upgraded to [Expo SDK 37](https://blog.expo.io/expo-sdk-37-is-now-available-dd5770f066a6)
 - upgraded to [Expo SDK 36](https://blog.expo.io/expo-sdk-36-is-now-available-b91897b437fe)
 - upgraded to [Expo SDK 35](https://blog.expo.io/expo-sdk-35-is-now-available-beee0dfafbf4)
-- upgraded to React Navigation v4 ([api](https://reactnavigation.org/docs/en/api-reference.html) | [docs](https://reactnavigation.org/docs/en/getting-started.html))
+- upgraded to [React Navigation v4](https://reactnavigation.org/docs/4.x/getting-started)
 - upgraded to [Expo SDK 34](https://blog.expo.io/expo-sdk-34-is-now-available-4f7825239319)
-- React Navigation Theme Support / Example Usage ([themes docs](https://reactnavigation.org/docs/en/themes.html))
-- upgraded to React Navigation v3 ([api](https://reactnavigation.org/docs/en/3.x/api-reference.html) | [docs](https://reactnavigation.org/docs/en/3.x/getting-started.html))
+- React Navigation Theme Support / Example Usage ([themes docs](https://reactnavigation.org/docs/4.x/themes))
+- upgraded to [React Navigation v3](https://reactnavigation.org/docs/3.x/getting-started)
 
 ### version: 0.0.1
 
 this starter for a multi screens/stack app is at a good state
 
-- React Navigation v2 ([api](https://reactnavigation.org/docs/en/2.x/api-reference.html) | [docs](https://reactnavigation.org/docs/en/2.x/getting-started.html))
+- started with [React Navigation v2](https://reactnavigation.org/docs/2.x/getting-started)
 - preloading/caching local images (with splash loading screen)
 - utility checker for the notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
 - simple jest tests
