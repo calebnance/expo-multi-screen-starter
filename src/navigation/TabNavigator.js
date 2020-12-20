@@ -7,7 +7,7 @@ import MultiStack from './MultiStack';
 import StatsStack from './StatsStack';
 import SettingsStack from './SettingsStack';
 
-export default createBottomTabNavigator(
+const BottomTabNavigator = createBottomTabNavigator(
   {
     HomeStack,
     MultiStack,
@@ -28,3 +28,5 @@ export default createBottomTabNavigator(
     }
   }
 );
+
+export default BottomTabNavigator;

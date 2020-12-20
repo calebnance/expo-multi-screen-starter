@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
 import { useTheme } from 'react-navigation';
 import { gStyle, images } from '../constants';

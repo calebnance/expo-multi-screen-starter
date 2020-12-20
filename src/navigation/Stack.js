@@ -6,13 +6,11 @@ import TabNavigator from './TabNavigator';
 
 const StackNavigator = createStackNavigator(
   {
-    Main: {
-      screen: TabNavigator
-    }
+    TabNavigator
   },
   {
     headerMode: 'none',
-    initialRouteName: 'Main',
+    initialRouteName: 'TabNavigator',
     mode: 'modal'
   }
 );
