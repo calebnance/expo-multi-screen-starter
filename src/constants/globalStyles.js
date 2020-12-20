@@ -29,6 +29,10 @@ export default {
     flex: 1,
     textAlign: 'center'
   },
+  headerBaseEnds: {
+    flex: 1,
+    justifyContent: 'center'
+  },
 
   // button
   // ///////////////////////////////////////////////////////////////////////////
