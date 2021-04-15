@@ -12,7 +12,7 @@ web demo: [Expo Multi Screen Starter](https://expo-multi-screen-starter.vercel.a
 
 ### Out of the Box
 
-- Expo SDK 40
+- Expo SDK 41
 - React Navigation v4 & Theme Support!
 - iOS 13 Appearance Support (with [react-native-appearance](https://github.com/expo/react-native-appearance))
 - Preloading/caching local assets
@@ -98,6 +98,7 @@ Run Project Locally: `expo start` or `yarn dev`
 
 ### version: 0.0.2 (current)
 
+- upgraded to [Expo SDK 41](https://blog.expo.io/expo-sdk-41-12cc5232f2ef)
 - upgraded to [Expo SDK 40](https://blog.expo.io/expo-sdk-40-is-now-available-d4d73e67da33)
 - upgraded to [Expo SDK 39](https://blog.expo.io/expo-sdk-39-is-now-available-4c10aa825e3f)
 - upgraded to [Expo SDK 38](https://blog.expo.io/expo-sdk-38-is-now-available-ab6cd30ca2ee)
