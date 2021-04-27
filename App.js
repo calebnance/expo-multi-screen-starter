@@ -37,14 +37,9 @@ class App extends React.Component {
       environmentID,
       cacheFlags: true,
       AsyncStorage,
-      enableLogs: true,
+      enableLogs: false,
       onChange: handleFlags,
-      onError: handleFlagsError,
-      defaultFlags: {
-        themes: [
-          'light'
-        ]
-      }
+      onError: handleFlagsError
     });
     flagsmith.startListening(12000);
 
