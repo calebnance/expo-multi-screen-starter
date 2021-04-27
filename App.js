@@ -4,9 +4,13 @@ import { ScreenOrientation } from 'expo';
 import AppLoading from 'expo-app-loading';
 import { Appearance } from 'react-native-appearance';
 import { device, func } from './src/constants';
+import flagsmith from 'react-native-flagsmith';
 
 // tab navigator
 import Stack from './src/navigation/Stack';
+
+import AsyncStorage from '@react-native-community/async-storage';
+const environmentID = "nzSwVvSBKPXat8gM6guipa";
 
 class App extends React.Component {
   constructor(props) {
@@ -28,6 +32,22 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    const { handleFlags, handleFlagsError } = this;
+    flagsmith.init({
+      environmentID,
+      cacheFlags: true,
+      AsyncStorage,
+      enableLogs: true,
+      onChange: handleFlags,
+      onError: handleFlagsError,
+      defaultFlags: {
+        themes: [
+          'light'
+        ]
+      }
+    });
+    flagsmith.startListening(12000);
+
     // get system preference
     const colorScheme = Appearance.getColorScheme();
 
@@ -65,13 +85,30 @@ class App extends React.Component {
 
         <Stack
           screenProps={{
-            updateTheme: this.updateTheme
+            updateTheme: this.updateTheme,
+            themes: JSON.parse(flagsmith.getValue('themes'))
           }}
           theme={theme}
         />
       </React.Fragment>
     );
   }
+
+  handleFlags = (oldFlags, params) => {
+    this.setState({
+      ...params,
+      isLoading: false,
+      logs: [{
+        timestamp: new Date().toTimeString(),
+        params: JSON.stringify(params),
+        oldData: JSON.stringify(oldFlags),
+        data: JSON.stringify(flagsmith.getAllFlags()),
+      }].concat(this.state.logs)
+    });
+  };
+  handleFlagsError = (data) => {
+    console.log('Error getting feature flags', data);
+  };
 }
 
 export default App;
