@@ -26,7 +26,6 @@ export default {
   // navigation styles
   // ///////////////////////////////////////////////////////////////////////////
   headerTitleStyle: {
-    flex: 1,
     textAlign: 'center'
   },
   headerBaseEnds: {

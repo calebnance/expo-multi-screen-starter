@@ -30,7 +30,7 @@ Run Project Locally: `yarn dev` or `yarn start`
 
 ## Features
 
-- Expo SDK 41
+- Expo SDK 42
 - React Navigation v4 & Theme Support!
 - iOS 13 Appearance Support (with [react-native-appearance](https://github.com/expo/react-native-appearance))
 - Preloading/caching local assets
@@ -61,6 +61,7 @@ Run Project Locally: `yarn dev` or `yarn start`
 
 ### version: 0.0.2 (current)
 
+- upgraded to [Expo SDK 42](https://blog.expo.io/expo-sdk-42-579aee2348b6)
 - upgraded to [Expo SDK 41](https://blog.expo.io/expo-sdk-41-12cc5232f2ef)
 - upgraded to [Expo SDK 40](https://blog.expo.io/expo-sdk-40-is-now-available-d4d73e67da33)
 - upgraded to [Expo SDK 39](https://blog.expo.io/expo-sdk-39-is-now-available-4c10aa825e3f)
