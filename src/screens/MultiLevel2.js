@@ -1,9 +1,6 @@
 import * as React from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import { gStyle } from '../constants';
-
-// components
-import NavigationBack from '../components/NavigationBack';
 
 const MultiLevel2 = () => {
   const theme = 'dark';
@@ -17,12 +14,5 @@ const MultiLevel2 = () => {
     </ScrollView>
   );
 };
-
-MultiLevel2.navigationOptions = ({ navigation }) => ({
-  headerLeft: () => <NavigationBack navigation={navigation} />,
-  headerRight: () => <View style={{ flex: 1 }} />,
-  headerTitleStyle: gStyle.headerTitleStyle,
-  title: 'Level 2'
-});
 
 export default MultiLevel2;

@@ -17,7 +17,7 @@ const Home = ({ navigation }) => {
         <View style={gStyle.spacer64} />
 
         <Touch
-          onPress={() => navigation.navigate('MultiBase')}
+          onPress={() => navigation.navigate('StackMulti')}
           text="Jump to Multi tab"
         />
 
@@ -26,11 +26,6 @@ const Home = ({ navigation }) => {
       </ScrollView>
     </View>
   );
-};
-
-Home.navigationOptions = {
-  headerTitleStyle: gStyle.headerTitleStyle,
-  title: 'Home'
 };
 
 Home.propTypes = {

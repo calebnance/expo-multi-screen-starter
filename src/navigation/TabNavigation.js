@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { colors, gStyle } from '../constants';
+import { colors } from '../constants';
 
 // grabs stacks
 import StackHome from './StackHome';
@@ -27,33 +27,27 @@ const Tab = createBottomTabNavigator();
 
 export default () => (
   <Tab.Navigator
-    screenOptions={({ route }) => ({
-      headerShown: false,
-      tabBarActiveTintColor: colors.white,
-      tabBarInactiveTintColor: colors.inactiveGrey,
-      tabBarIcon: ({ color }) => {
-        let icon = <SvgHome fill={color} />;
-
-        if (route.name === 'StackMulti') {
-          icon = <SvgPages fill={color} />;
-        } else if (route.name === 'StackStats') {
-          icon = <SvgStats fill={color} />;
-        } else if (route.name === 'StackSettings') {
-          icon = <SvgCog fill={color} />;
-        }
-
-        return icon;
-      },
-      tabBarStyle: gStyle.navTabStyle
-    })}
+    screenOptions={{
+      headerShown: false
+    }}
     tabBarOptions={{
-      activeTintColor: '#e91e63'
+      activeBackgroundColor: 'purple',
+      activeTintColor: colors.white,
+      inactiveTintColor: colors.inactiveGrey,
+      style: {
+        backgroundColor: 'brown',
+        borderTopColor: 'yellow'
+      },
+      tabStyle: {
+        // backgroundColor: 'black'
+      }
     }}
   >
     <Tab.Screen
       name="StackHome"
       component={StackHome}
       options={{
+        tabBarIcon: ({ focused }) => <SvgHome active={focused} />,
         tabBarLabel: 'Home'
       }}
     />
@@ -61,6 +55,7 @@ export default () => (
       name="StackMulti"
       component={StackMulti}
       options={{
+        tabBarIcon: ({ focused }) => <SvgPages active={focused} />,
         tabBarLabel: 'Multi'
       }}
     />
@@ -68,6 +63,7 @@ export default () => (
       name="StackStats"
       component={StackStats}
       options={{
+        tabBarIcon: ({ focused }) => <SvgStats active={focused} />,
         tabBarLabel: 'Stats'
       }}
     />
@@ -75,6 +71,7 @@ export default () => (
       name="StackSettings"
       component={StackSettings}
       options={{
+        tabBarIcon: ({ focused }) => <SvgCog active={focused} />,
         tabBarLabel: 'Settings'
       }}
     />

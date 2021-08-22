@@ -26,11 +26,6 @@ const MultiBase = ({ navigation }) => {
   );
 };
 
-MultiBase.navigationOptions = {
-  headerTitleStyle: gStyle.headerTitleStyle,
-  title: 'Multi Screens'
-};
-
 MultiBase.propTypes = {
   // required
   navigation: PropTypes.object.isRequired
