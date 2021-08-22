@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { ScrollView, Text, View } from 'react-native';
-import { useTheme } from 'react-navigation';
 import { gStyle } from '../constants';
 
 // components
 import NavigationBack from '../components/NavigationBack';
 
-const MultiLevel2Screen = () => {
-  const theme = useTheme();
+const MultiLevel2 = () => {
+  const theme = 'dark';
 
   return (
     <ScrollView
@@ -19,11 +18,11 @@ const MultiLevel2Screen = () => {
   );
 };
 
-MultiLevel2Screen.navigationOptions = ({ navigation }) => ({
+MultiLevel2.navigationOptions = ({ navigation }) => ({
   headerLeft: () => <NavigationBack navigation={navigation} />,
   headerRight: () => <View style={{ flex: 1 }} />,
   headerTitleStyle: gStyle.headerTitleStyle,
   title: 'Level 2'
 });
 
-export default MultiLevel2Screen;
+export default MultiLevel2;

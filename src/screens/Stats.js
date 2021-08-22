@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { ScrollView, Text } from 'react-native';
-import { useTheme } from 'react-navigation';
 import { gStyle } from '../constants';
 
-const StatsScreen = () => {
-  const theme = useTheme();
+const Stats = () => {
+  const theme = 'dark';
 
   return (
     <ScrollView
@@ -16,9 +15,9 @@ const StatsScreen = () => {
   );
 };
 
-StatsScreen.navigationOptions = {
+Stats.navigationOptions = {
   headerTitleStyle: gStyle.headerTitleStyle,
   title: 'Stats'
 };
 
-export default StatsScreen;
+export default Stats;

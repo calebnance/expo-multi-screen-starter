@@ -5,8 +5,8 @@ import AppLoading from 'expo-app-loading';
 import { Appearance } from 'react-native-appearance';
 import { device, func } from './src/constants';
 
-// tab navigator
-import Stack from './src/navigation/Stack';
+// main navigation stack
+import RootStack from './src/navigation/RootStack';
 
 class App extends React.Component {
   constructor(props) {
@@ -63,7 +63,7 @@ class App extends React.Component {
       <React.Fragment>
         <StatusBar barStyle={device.iOS ? iOSStatusType : 'light-content'} />
 
-        <Stack
+        <RootStack
           screenProps={{
             updateTheme: this.updateTheme
           }}

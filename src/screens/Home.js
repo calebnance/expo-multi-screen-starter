@@ -1,14 +1,13 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, Text, View } from 'react-native';
-import { useTheme } from 'react-navigation';
 import { gStyle } from '../constants';
 
 // components
 import Touch from '../components/Touch';
 
-const HomeScreen = ({ navigation, screenProps }) => {
-  const theme = useTheme();
+const Home = ({ navigation }) => {
+  const theme = 'dark';
 
   return (
     <View style={gStyle.container[theme]}>
@@ -22,28 +21,21 @@ const HomeScreen = ({ navigation, screenProps }) => {
           text="Jump to Multi tab"
         />
 
-        <Touch
-          onPress={() => screenProps.updateTheme('light')}
-          text="Light theme"
-        />
-        <Touch
-          onPress={() => screenProps.updateTheme('dark')}
-          text="Dark theme"
-        />
+        <Touch onPress={() => null} text="Light theme" />
+        <Touch onPress={() => null} text="Dark theme" />
       </ScrollView>
     </View>
   );
 };
 
-HomeScreen.navigationOptions = {
+Home.navigationOptions = {
   headerTitleStyle: gStyle.headerTitleStyle,
   title: 'Home'
 };
 
-HomeScreen.propTypes = {
+Home.propTypes = {
   // required
-  navigation: PropTypes.object.isRequired,
-  screenProps: PropTypes.object.isRequired
+  navigation: PropTypes.object.isRequired
 };
 
-export default HomeScreen;
+export default Home;

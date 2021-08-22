@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native';
 import { gStyle } from '../constants';
 
 // icons
-import SvgCircleLeft from './icons/Svg.CircleLeft';
+import SvgCircleLeft from '../icons/Svg.CircleLeft';
 
 const NavigationBack = ({ navigation }) => (
   <TouchableOpacity
