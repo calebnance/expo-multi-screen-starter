@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { StatusBar } from 'react-native';
+import { Appearance, StatusBar } from 'react-native';
 import { ScreenOrientation } from 'expo';
 import AppLoading from 'expo-app-loading';
-import { Appearance } from 'react-native-appearance';
 import { device, func } from './src/constants';
 
 // main navigation stack
@@ -52,7 +51,9 @@ class App extends React.Component {
     if (isLoading) {
       return (
         <AppLoading
-          onError={console.warn}
+          onError={() => {
+            // console.warn
+          }}
           onFinish={() => this.setState({ isLoading: false })}
           startAsync={func.loadAssetsAsync}
         />
