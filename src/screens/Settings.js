@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
-import { useTheme } from 'react-navigation';
 import { gStyle, images } from '../constants';
 
 const headerImage = __DEV__ ? 'rabbitDev' : 'rabbitProd';
 
-const SettingsScreen = () => {
-  const theme = useTheme();
+const Settings = () => {
+  const theme = 'dark';
 
   return (
     <ScrollView
@@ -24,7 +23,7 @@ const SettingsScreen = () => {
   );
 };
 
-SettingsScreen.navigationOptions = ({ theme }) => {
+Settings.navigationOptions = ({ theme }) => {
   return {
     headerLeft: () => (
       <View style={[gStyle.headerBaseEnds, { paddingLeft: 16 }]}>
@@ -63,4 +62,4 @@ headerLeft: !shouldShowBackButton(navigation) ? (
 ) : null,
 */
 
-export default SettingsScreen;
+export default Settings;

@@ -1,11 +1,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
-import { useTheme } from 'react-navigation';
-import { colors } from '../../constants';
+import { colors } from '../constants';
 
 const SvgCircleLeft = ({ active, size }) => {
-  const theme = useTheme();
+  const theme = 'dark';
   const fill = active
     ? colors.activeTintColor[theme]
     : colors.inactiveTintColor[theme];

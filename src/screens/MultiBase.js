@@ -1,14 +1,13 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, Text, View } from 'react-native';
-import { useTheme } from 'react-navigation';
 import { gStyle } from '../constants';
 
 // components
 import Touch from '../components/Touch';
 
-const MultiBaseScreen = ({ navigation }) => {
-  const theme = useTheme();
+const MultiBase = ({ navigation }) => {
+  const theme = 'dark';
 
   return (
     <ScrollView
@@ -27,14 +26,9 @@ const MultiBaseScreen = ({ navigation }) => {
   );
 };
 
-MultiBaseScreen.navigationOptions = {
-  headerTitleStyle: gStyle.headerTitleStyle,
-  title: 'Multi Screens'
-};
-
-MultiBaseScreen.propTypes = {
+MultiBase.propTypes = {
   // required
   navigation: PropTypes.object.isRequired
 };
 
-export default MultiBaseScreen;
+export default MultiBase;

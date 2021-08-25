@@ -1,11 +1,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
-import { useTheme } from 'react-navigation';
-import { colors } from '../../constants';
+import { colors } from '../constants';
 
-const SvgStats = ({ active, size }) => {
-  const theme = useTheme();
+const SvgPages = ({ active, size }) => {
+  const theme = 'dark';
   const fill = active
     ? colors.activeTintColor[theme]
     : colors.inactiveTintColor[theme];
@@ -13,22 +12,22 @@ const SvgStats = ({ active, size }) => {
   return (
     <Svg height={size} width={size} viewBox="0 0 32 32">
       <Path
-        d="M0 26h32v4H0zm4-8h4v6H4zm6-8h4v14h-4zm6 6h4v8h-4zm6-12h4v20h-4z"
+        d="M20 8V0H6L0 6v18h12v8h20V8H20zM6 2.828V6H2.828L6 2.828zM2 22V8h6V2h10v6l-6 6v8H2zm16-11.172V14h-3.172L18 10.828zM30 30H14V16h6v-6h10v20z"
         fill={fill}
       />
     </Svg>
   );
 };
 
-SvgStats.defaultProps = {
+SvgPages.defaultProps = {
   active: false,
   size: 20
 };
 
-SvgStats.propTypes = {
+SvgPages.propTypes = {
   // optional
   active: PropTypes.bool,
   size: PropTypes.number
 };
 
-export default SvgStats;
+export default SvgPages;

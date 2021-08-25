@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { StatusBar } from 'react-native';
+import { Appearance, StatusBar } from 'react-native';
 import { ScreenOrientation } from 'expo';
 import AppLoading from 'expo-app-loading';
-import { Appearance } from 'react-native-appearance';
 import { device, func } from './src/constants';
 
-// tab navigator
-import Stack from './src/navigation/Stack';
+// main navigation stack
+import RootStack from './src/navigation/RootStack';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,6 +29,7 @@ class App extends React.Component {
   componentDidMount() {
     // get system preference
     const colorScheme = Appearance.getColorScheme();
+    console.log('react-native::Appearance', colorScheme);
 
     // if light or dark
     if (colorScheme !== 'no-preference') {
@@ -52,7 +52,9 @@ class App extends React.Component {
     if (isLoading) {
       return (
         <AppLoading
-          onError={console.warn}
+          onError={() => {
+            // console.warn
+          }}
           onFinish={() => this.setState({ isLoading: false })}
           startAsync={func.loadAssetsAsync}
         />
@@ -63,12 +65,7 @@ class App extends React.Component {
       <React.Fragment>
         <StatusBar barStyle={device.iOS ? iOSStatusType : 'light-content'} />
 
-        <Stack
-          screenProps={{
-            updateTheme: this.updateTheme
-          }}
-          theme={theme}
-        />
+        <RootStack theme={theme} />
       </React.Fragment>
     );
   }
