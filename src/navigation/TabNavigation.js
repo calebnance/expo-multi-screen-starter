@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Appearance } from 'react-native-appearance';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { colors } from '../constants';
 
@@ -25,55 +26,61 @@ const Tab = createBottomTabNavigator();
 //   dark: colors.white20
 // }
 
-export default () => (
-  <Tab.Navigator
-    screenOptions={{
-      headerShown: false
-    }}
-    tabBarOptions={{
-      activeBackgroundColor: 'purple',
-      activeTintColor: colors.white,
-      inactiveTintColor: colors.inactiveGrey,
-      style: {
-        backgroundColor: 'brown',
-        borderTopColor: 'yellow'
-      },
-      tabStyle: {
-        // backgroundColor: 'black'
-      }
-    }}
-  >
-    <Tab.Screen
-      name="StackHome"
-      component={StackHome}
-      options={{
-        tabBarIcon: ({ focused }) => <SvgHome active={focused} />,
-        tabBarLabel: 'Home'
+export default () => {
+  // get system preference
+  const colorScheme = Appearance.getColorScheme();
+  console.log('react-native-appearance::Appearance', colorScheme);
+
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false
       }}
-    />
-    <Tab.Screen
-      name="StackMulti"
-      component={StackMulti}
-      options={{
-        tabBarIcon: ({ focused }) => <SvgPages active={focused} />,
-        tabBarLabel: 'Multi'
+      tabBarOptions={{
+        activeBackgroundColor: 'purple',
+        activeTintColor: colors.white,
+        inactiveTintColor: colors.inactiveGrey,
+        style: {
+          backgroundColor: 'brown',
+          borderTopColor: 'yellow'
+        },
+        tabStyle: {
+          // backgroundColor: 'blue'
+        }
       }}
-    />
-    <Tab.Screen
-      name="StackStats"
-      component={StackStats}
-      options={{
-        tabBarIcon: ({ focused }) => <SvgStats active={focused} />,
-        tabBarLabel: 'Stats'
-      }}
-    />
-    <Tab.Screen
-      name="StackSettings"
-      component={StackSettings}
-      options={{
-        tabBarIcon: ({ focused }) => <SvgCog active={focused} />,
-        tabBarLabel: 'Settings'
-      }}
-    />
-  </Tab.Navigator>
-);
+    >
+      <Tab.Screen
+        name="StackHome"
+        component={StackHome}
+        options={{
+          tabBarIcon: ({ focused }) => <SvgHome active={focused} />,
+          tabBarLabel: 'Home'
+        }}
+      />
+      <Tab.Screen
+        name="StackMulti"
+        component={StackMulti}
+        options={{
+          tabBarIcon: ({ focused }) => <SvgPages active={focused} />,
+          tabBarLabel: 'Multi'
+        }}
+      />
+      <Tab.Screen
+        name="StackStats"
+        component={StackStats}
+        options={{
+          tabBarIcon: ({ focused }) => <SvgStats active={focused} />,
+          tabBarLabel: 'Stats'
+        }}
+      />
+      <Tab.Screen
+        name="StackSettings"
+        component={StackSettings}
+        options={{
+          tabBarIcon: ({ focused }) => <SvgCog active={focused} />,
+          tabBarLabel: 'Settings'
+        }}
+      />
+    </Tab.Navigator>
+  );
+};

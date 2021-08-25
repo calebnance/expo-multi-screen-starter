@@ -29,6 +29,7 @@ class App extends React.Component {
   componentDidMount() {
     // get system preference
     const colorScheme = Appearance.getColorScheme();
+    console.log('react-native::Appearance', colorScheme);
 
     // if light or dark
     if (colorScheme !== 'no-preference') {
@@ -64,12 +65,7 @@ class App extends React.Component {
       <React.Fragment>
         <StatusBar barStyle={device.iOS ? iOSStatusType : 'light-content'} />
 
-        <RootStack
-          screenProps={{
-            updateTheme: this.updateTheme
-          }}
-          theme={theme}
-        />
+        <RootStack theme={theme} />
       </React.Fragment>
     );
   }
