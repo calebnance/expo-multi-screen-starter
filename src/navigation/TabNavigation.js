@@ -34,17 +34,15 @@ export default () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        headerShown: false
-      }}
-      tabBarOptions={{
-        activeBackgroundColor: 'purple',
-        activeTintColor: colors.white,
-        inactiveTintColor: colors.inactiveGrey,
-        style: {
+        headerShown: false,
+        tabBarActiveBackgroundColor: 'purple',
+        tabBarActiveTintColor: colors.white,
+        tabBarInactiveTintColor: colors.inactiveGrey,
+        tabBarStyle: {
           backgroundColor: 'brown',
           borderTopColor: 'yellow'
         },
-        tabStyle: {
+        tabBarItemStyle: {
           // backgroundColor: 'blue'
         }
       }}
